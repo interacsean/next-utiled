@@ -46,10 +46,7 @@ const HtmlHeadView: FC<HtmlHeadProps> = (
         content={`${SITE.STATIC_URI}/images/app-icon/ms-icon-144x144.png`}
       />
       <meta name="theme-color" content="#352E3F" />
-      <link
-        href="https://fonts.googleapis.com/css?family=Lato:300,400,500,600,700,900|Raleway:300,400,600,700&display=swap"
-        rel="stylesheet"
-      />
+        <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet" />
       <meta
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
