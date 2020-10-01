@@ -1,0 +1,351 @@
+@import '../../../theme/common';
+
+@mixin clickable-text--subtle {
+  &:hover {
+    color: $col-link;
+    text-decoration: underline;
+  }
+}
+@mixin clickable-text {
+  @include clickable-text--subtle;
+  @include theme-light {
+    color: $col-link;
+  }
+  @include theme-dark {
+    color: $col-link;
+  }
+}
+
+@mixin optionally-clickable-text {
+  &.--is-clickable {
+    @include clickable;
+    &:not(.--subtle):not(.--is-anemic) {
+      @include clickable-text;
+    }
+    @include clickable-text--subtle;
+  }
+}
+
+.content--anemic {
+  font-size: toRem(18px);
+  line-height: 167%;
+  font-family: $font-content;
+}
+.content {
+  @include optionally-clickable-text;
+  @extend .content--anemic;
+  &:not(.--is-anemic) {
+    @include theme-light {
+      color: $col-content;
+    }
+    @include theme-dark {
+      color: $col-content-on-dark;
+    }
+  }
+  + p {
+    margin-top: 0.67em;
+  }
+}
+
+.content-feature--anemic {
+  font-size: toRem(22px);
+  line-height: 157%;
+  font-family: $font-content;
+  + p {
+    margin-top: 1em;
+  }
+}
+.content-feature {
+  @extend .content-feature--anemic;
+  &:not(.--is-anemic) {
+    @include theme-light {
+      color: $col-content;
+    }
+    @include theme-dark {
+      color: $col-content-on-dark;
+    }
+  }
+}
+
+.content-caption--anemic {
+  font-size: toRem(14px);
+  font-family: $font-content;
+  font-weight: $font-weight-light;
+}
+.content-caption {
+  @extend .content-caption--anemic;
+  &:not(.--is-anemic) {
+    @include theme-light {
+      color: $col-content-caption;
+    }
+    @include theme-dark {
+      color: $col-content-caption-on-dark;
+    }
+  }
+}
+
+.content-detail--anemic {
+  font-size: toRem(13.5px);
+  font-family: $font-content;
+}
+.content-detail {
+  @include optionally-clickable-text;
+  @extend .content-detail--anemic;
+  &:not(.--is-anemic) {
+    @include theme-light {
+      color: $col-content;
+    }
+    @include theme-dark {
+      color: $col-content-on-dark;
+    }
+  }
+}
+
+.content-detail-minor--anemic {
+  font-size: toRem(11.5px);
+  font-family: $font-content;
+}
+.content-detail-minor {
+  @extend .content-detail-minor--anemic;
+  &:not(.--is-anemic) {
+    @include theme-light {
+      color: $col-content-caption;
+    }
+    @include theme-dark {
+      color: $col-content-caption-on-dark;
+    }
+  }
+}
+
+.content-hint--anemic {
+  font-size: toRem(13.5px);
+  font-family: $font-content;
+  font-style: italic;
+}
+.content-hint {
+  @extend .content-hint--anemic;
+  &:not(.--is-anemic) {
+    @include theme-light {
+      color: $col-content-hint;
+    }
+    @include theme-dark {
+      color: $col-content-hint-on-dark;
+    }
+  }
+}
+
+.content-pragmatic--anemic {
+  font-size: toRem(16px);
+  font-family: $font-content;
+}
+.content-pragmatic {
+  @include optionally-clickable-text;
+  @extend .content-pragmatic--anemic;
+  &:not(.--is-anemic) {
+    @include theme-light {
+      color: $col-content;
+    }
+    @include theme-dark {
+      color: $col-content-on-dark;
+    }
+  }
+}
+
+.content-field-label-inline--anemic {
+  font-size: toRem(13.5px);
+  text-transform: uppercase;
+  font-family: $font-content;
+}
+.content-field-label-inline {
+  @extend .content-field-label-inline--anemic;
+  &:not(.--is-anemic) {
+    @include theme-light {
+      color: $col-content;
+    }
+    @include theme-dark {
+      color: $col-content-on-dark;
+    }
+  }
+  &:not(.--no-weight) {
+    font-weight: $font-weight-medium;
+  }
+}
+
+.content-field-label--anemic {
+  font-size: toRem(14px);
+  font-family: $font-content;
+}
+.content-field-label {
+  @extend .content-field-label--anemic;
+  &:not(.--is-anemic) {
+    @include theme-light {
+      color: $col-content;
+    }
+    @include theme-dark {
+      color: $col-content-on-dark;
+    }
+  }
+  &:not(.--no-weight) {
+    font-weight: $font-weight-medium;
+  }
+}
+
+.content-fields-set-label--anemic {
+  font-size: toRem(15px);
+  text-transform: uppercase;
+  font-weight: $font-weight-extrabold;
+  font-family: $font-content;
+  letter-spacing: toRem(0.5px);
+}
+.content-fields-set-label {
+  @extend .content-fields-set-label--anemic;
+  &:not(.--is-anemic) {
+    @include theme-light {
+      color: transparentize($col-headings-2, 0.12);
+    }
+    @include theme-dark {
+      color: transparentize($col-headings-2-on-dark, 0.12);
+    }
+  }
+}
+
+.content-tag--anemic {
+  font-size: toRem(11.5px);
+  font-family: $font-content;
+  text-transform: uppercase;
+}
+.content-tag {
+  @extend .content-tag--anemic;
+  @include optionally-clickable-text;
+  &:not(.--is-anemic) {
+    @include theme-light {
+      color: $col-content;
+    }
+    @include theme-dark {
+      color: $col-content-on-dark;
+    }
+  }
+  &:not(.--no-weight) {
+    font-weight: $font-weight-black;
+  }
+}
+
+.content-tag-clickable {
+  font-size: toRem(11.5px);
+  font-family: $font-content;
+  text-transform: uppercase;
+  @include optionally-clickable-text;
+  &:not(.--is-anemic) {
+    @include theme-light {
+      color: $col-link;
+    }
+    @include theme-dark {
+      color: $col-link;
+    }
+  }
+  &:not(.--no-weight) {
+    font-weight: $font-weight-bold;
+  }
+}
+
+.h1--anemic {
+  font-size: toRem(64px);
+  @include mobile-only {
+    font-size: toRem(40px);
+  }
+  line-height: 117%;
+  font-weight: $font-weight-semibold;
+  font-family: $font-headings;
+}
+.h1 {
+  @extend .h1--anemic;
+  &:not(.--is-anemic) {
+    @include theme-light {
+      color: $col-headings;
+    }
+    @include theme-dark {
+      color: $col-headings-on-dark;
+    }
+  }
+}
+
+.h2--anemic {
+  font-size: toRem(39px);
+  @include mobile-only {
+    font-size: toRem(30px);
+  }
+  line-height: 137%;
+  font-weight: $font-weight-semibold;
+  font-family: $font-headings;
+}
+.h2 {
+  @extend .h2--anemic;
+  &:not(.--is-anemic) {
+    @include theme-light {
+      color: $col-headings;
+    }
+    @include theme-dark {
+      color: $col-headings-on-dark;
+    }
+  }
+}
+
+.h3--anemic {
+  font-size: toRem(28px);
+  @include mobile-only {
+    font-size: toRem(24px);
+  }
+  line-height: 130%;
+  font-weight: $font-weight-semibold;
+  font-family: $font-headings;
+}
+.h3 {
+  @extend .h3--anemic;
+  &:not(.--is-anemic) {
+    @include theme-light {
+      color: $col-headings;
+    }
+    @include theme-dark {
+      color: $col-headings-on-dark;
+    }
+  }
+}
+
+.h4--anemic {
+  font-size: toRem(21px);
+  line-height: 117%;
+  font-weight: $font-weight-bold;
+  font-family: $font-headings;
+}
+.h4 {
+  @extend .h4--anemic;
+  &:not(.--is-anemic) {
+    @include theme-light {
+      color: $col-headings;
+    }
+    @include theme-dark {
+      color: $col-headings-on-dark;
+    }
+  }
+}
+
+.h5--anemic {
+  font-size: toRem(18px);
+  line-height: 117%;
+  font-family: $font-headings;
+  &:not(.--no-weight) {
+    font-weight: $font-weight-semibold;
+  }
+}
+
+.h5 {
+  @extend .h5--anemic;
+  &:not(.--is-anemic) {
+    @include theme-light {
+      color: $col-headings;
+    }
+    @include theme-dark {
+      color: $col-headings-on-dark;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@import '../../../theme/functions';
+
+.container {
+  @include theme-light {
+    border: 1px solid $col-panel-contrast-a50;
+    &.--padded {
+      @include paddingHorizontal($fieldset-padding);
+      padding-bottom: $fieldset-padding;
+    }
+  }
+
+  > ._title > ._helpIcon {
+    margin-left: $pad-1-4;
+    text-transform: none;
+  }
+}

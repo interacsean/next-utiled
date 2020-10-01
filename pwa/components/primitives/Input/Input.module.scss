@@ -1,0 +1,85 @@
+@import '../../../theme/variables';
+@import '../../../theme/functions';
+@import '../Typo/Typo.module';
+
+@import 'Input-style.module';
+
+.input-ctnr {
+  position: relative;
+  transition: border-color $txn-swift;
+
+  @include theme-light {
+    &.--filled {
+      background-color: $col-light-dk1;
+    }
+  }
+  @include theme-dark {
+    &.--filled {
+      background-color: $col-bg-dark-ltr;
+    }
+    &:not(.--filled) {
+      > .input {
+        border-bottom: 1px solid $col-panel-contrast;
+      }
+    }
+  }
+}
+
+.input {
+  @include input-style();
+  &.--with-typo {
+    @include input-style-typo();
+  }
+  &.--disabled {
+    color: $col-content-dimmed;
+  }
+  max-width: 100%;
+  &.--no-prefix {
+    padding-left: $pad-1-4;
+  }
+  transition: box-shadow $txn-swift;
+
+  .input-ctnr.--filled > & {
+    &.--enabled {
+      @include input-style-filled;
+    }
+  }
+  .input-ctnr.--underline > & {
+    &.--enabled {
+      @include input-style-underlined;
+    }
+    &.--disabled {
+      @include input-style-underlined--disabled;
+    }
+  }
+}
+
+.prefix {
+  position: absolute;
+  left: 0;
+  color: $col-gray-50;
+  transition: color 100ms;
+  padding-left: 0.1em;
+
+  .input-ctnr:focus-within & {
+    color: $col-gray-72;
+  }
+}
+
+.icon-ctnr {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+}
+
+.error-text {
+  padding-left: $pad-1-4;
+  margin-top: 0.2em;
+}
+
+.--width-full {
+  width: 100%;
+}

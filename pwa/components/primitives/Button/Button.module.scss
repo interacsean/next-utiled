@@ -1,0 +1,121 @@
+@import '../../../theme/variables';
+@import '../../../theme/functions';
+@import '../Typo/Typo.module';
+
+$h-l: 55px;
+$h-m: 40px;
+$h-s: 32px;
+$h-xs: 24px;
+
+.button-main {
+  @include paddingHorizontal(16px);
+  @include paddingVertical(0);
+  @extend .content--anemic;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  font-weight: $font-weight-medium;
+  color: $col-content-on-dark;
+  border-radius: 4px;
+  text-align: center;
+  border-color: transparent;
+  border-width: 0;
+
+  // primary
+  background-color: $col-primary-darkaqua;
+
+  // size medium
+  line-height: $h-m;
+
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.--var-full-width {
+  display: flex;
+  width: 100%;
+}
+
+.--size-large {
+  @include paddingHorizontal(24px);
+  line-height: $h-l;
+}
+
+.--size-small {
+  @include paddingHorizontal(12px);
+  @extend .content-pragmatic--anemic;
+  line-height: $h-s;
+}
+
+.--size-x-small {
+  @include paddingHorizontal(12px);
+  @extend .content-pragmatic--anemic;
+  line-height: $h-xs;
+}
+
+.--style-secondary {
+  background-color: $col-secondary-orange;
+}
+
+.--style-tertiary {
+  background-color: $col-tertiary-darkgray;
+}
+
+.--style-outline {
+  background-color: transparent;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $col-quaternary-cyan;
+  color: $col-quaternary-cyan;
+
+  line-height: #{$h-m - (1px * 2)};
+
+  &.--size-small {
+    line-height: #{$h-s - (1px * 2)};
+  }
+
+  &.--size-x-small {
+    line-height: #{$h-xs - (1px * 2)};
+  }
+
+  &.--size-large {
+    line-height: #{$h-l - (1px * 2)};
+  }
+
+  &.--style-secondary {
+    border-color: $col-secondary-orange;
+    color: $col-secondary-orange;
+  }
+  &.--style-tertiary {
+    border-color: $col-tertiary-darkgray-dk1;
+    color: $col-tertiary-darkgray-dk1;
+  }
+  &.--state-disabled {
+    background-color: transparent;
+    border-color: $col-gray-50-a40;
+    color: $col-gray-50-a40;
+  }
+}
+.--state-disabled {
+  background-color: $col-gray-50-a40;
+  border-color: transparent;
+  cursor: default;
+  &:active {
+    opacity: 1;
+  }
+}
+
+.buttonContent {
+  &.--loading {
+    visibility: hidden;
+  }
+}
+
+.loading-indicator {
+  position: absolute;
+  left: 0;
+  right: 0;
+}

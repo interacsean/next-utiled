@@ -1,0 +1,9 @@
+@import '../../../theme/variables';
+
+.price-divider {
+  color: $col-content-hint;
+
+  &.--default-pad {
+    padding: 0 $pad-1-3;
+  }
+}

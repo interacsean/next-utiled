@@ -1,0 +1,35 @@
+@import '../../../theme/common';
+
+.text {
+  color: $col-headings-on-dark;
+  font-family: $font-headings;
+  font-weight: $font-weight-bold;
+  font-size: toRem(17px);
+  letter-spacing: 0.6px;
+  line-height: 1em;
+
+  @include desktop-small-plus {
+    font-size: toRem(18px);
+  }
+  > ._subline {
+    font-weight: $font-weight-medium;
+    font-size: 0.7em;
+    letter-spacing: 2.7px;
+    text-transform: uppercase;
+  }
+}
+
+.logo-ctnr {
+  @include clickable;
+}
+
+.text-space {
+  letter-spacing: -0.1em;
+}
+
+.img {
+  height: 28px;
+  @include tablet-plus {
+    height: 32px;
+  }
+}

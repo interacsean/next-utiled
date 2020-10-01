@@ -1,0 +1,92 @@
+@import '../../../theme/common';
+@import '../Typo/Typo.module';
+
+.container {
+  position: relative;
+}
+
+.tooltip {
+  position: absolute;
+  z-index: $zidx-tooltips;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity $txn-swift;
+  .container:hover > & {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity $txn-slow $txn-delay;
+  }
+  border-radius: $card-border-radius;
+  background-color: $col-panel-contrast-dk12;
+  padding: $pad-1-2;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+
+  $spaceBetween: $pad-1-2;
+  &.--pos-top {
+    top: 0;
+    transform: translateY(calc(-100% - #{$spaceBetween})) translateX(-50%);
+    left: 50%;
+    &:after {
+      position: absolute;
+      bottom: -#{$spaceBetween - 1px};
+      left: calc(50% - #{$pad / 2});
+      @include triangle(
+        'bottom',
+        $col-panel-contrast-dk12,
+        $pad,
+        $spaceBetween
+      );
+    }
+  }
+  &.--pos-right {
+    right: 0;
+    transform: translateX(calc(100% + #{$spaceBetween})) translateY(-50%);
+    top: 50%;
+    &:after {
+      position: absolute;
+      left: -#{$spaceBetween - 1px};
+      top: calc(50% - #{$pad / 2});
+      @include triangle('left', $col-panel-contrast-dk12, $pad, $spaceBetween);
+    }
+  }
+  &.--pos-left {
+    left: 0;
+    transform: translateX(calc(-100% - #{$spaceBetween})) translateY(-50%);
+    top: 50%;
+    &:after {
+      position: absolute;
+      right: -#{$spaceBetween - 1px};
+      top: calc(50% - #{$pad / 2});
+      @include triangle('right', $col-panel-contrast-dk12, $pad, $spaceBetween);
+    }
+  }
+  &.--pos-bottom {
+    bottom: 0;
+    transform: translateY(calc(100% + #{$spaceBetween})) translateX(-50%);
+    left: 50%;
+    &:after {
+      position: absolute;
+      top: -#{$spaceBetween - 1px};
+      left: calc(50% - #{$pad / 2});
+      @include triangle('top', $col-panel-contrast-dk12, $pad, $spaceBetween);
+    }
+  }
+  &.--pos-bottomLeft {
+    bottom: 0;
+    transform: translateY(calc(100% + #{$spaceBetween}));
+    right: 0;
+  }
+
+  &.--basic {
+    &:not(.--wide) {
+      min-width: 12em;
+    }
+    &.--wide {
+      min-width: 18em;
+    }
+    @include theme-light {
+      color: $col-light;
+    }
+    @extend .content-caption--anemic;
+  }
+}

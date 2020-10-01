@@ -1,0 +1,28 @@
+@import '../../../theme/variables';
+
+.icon {
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.--size-small {
+  width: 20px;
+  height: 20px;
+}
+
+.--size-medium {
+  width: 32px;
+  height: 32px;
+}
+
+.--size-large {
+  width: 48px;
+  height: 48px;
+}
+
+.img {
+  max-height: 100%;
+  max-width: 100%;
+}

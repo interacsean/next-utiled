@@ -1,0 +1,49 @@
+@import '../../../theme/variables';
+@import '../../../theme/functions';
+
+$footer-min-height: 20px;
+
+.container {
+  min-height: 100vh;
+}
+
+.header-ctnr {
+  position: relative;
+  z-index: $zidx-header;
+  height: $header-height;
+
+  //box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
+
+  @include tablet-to-tablet-large {
+    height: $header-height-md;
+  }
+  @include desktop-small-plus {
+    height: $header-height-lg;
+  }
+}
+
+.header {
+  background-color: $col-bg-dark;
+  padding: $pad $pad-2;
+  @include tablet-plus {
+    padding: $pad-2 $pad-3;
+  }
+}
+
+.main-ctnr {
+  background-color: white;
+}
+
+.footer-ctnr {
+  padding: $pad;
+  @include tablet-plus {
+    padding: $pad-2;
+  }
+  min-height: $footer-min-height;
+  > ._footer {
+    width: 100%;
+    max-width: $bkpt-desktop-large;
+  }
+  background-color: $col-bg-dark;
+  color: $col-light;
+}

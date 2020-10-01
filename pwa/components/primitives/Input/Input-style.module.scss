@@ -1,0 +1,66 @@
+@import '../../../theme/functions';
+@import '../Typo/Typo.module';
+
+@mixin input-style {
+  padding-top: $pad-1-3;
+  padding-right: 0;
+  padding-bottom: 0.2em;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+
+  @include theme-light {
+    color: $col-content;
+    &::placeholder {
+      color: $col-gray-72;
+    }
+  }
+  @include theme-dark {
+    color: $col-content-on-dark;
+    &::placeholder {
+      color: $col-gray-50;
+    }
+  }
+}
+@mixin input-style-typo {
+  @extend .content-pragmatic;
+}
+
+@mixin input-style-filled {
+  &:focus {
+    outline: none;
+    @include theme-light {
+      box-shadow: 0 0 0 1px $col-bg-dark-lt2-a50;
+    }
+    @include theme-dark {
+      box-shadow: 0 0 0 1px $col-bg-dark-lt2-a50;
+    }
+  }
+}
+
+@mixin input-style-underlined--focus {
+  outline: none;
+
+  @include theme-light {
+    box-shadow: 0 1px 0 0 $col-panel-contrast;
+    border-bottom: 1px solid $col-panel-contrast;
+  }
+  @include theme-dark {
+    box-shadow: 0 1px 0 0 $col-panel-contrast;
+    border-bottom: 1px solid $col-panel-contrast;
+  }
+}
+
+@mixin input-style-underlined {
+  border-bottom: 1px solid $col-panel-contrast-a70;
+  &:hover {
+    box-shadow: 0 1px 0 0 $col-panel-contrast-a70;
+  }
+  &:focus {
+    @include input-style-underlined--focus;
+  }
+}
+@mixin input-style-underlined--disabled {
+  color: $col-content-dimmed;
+  border-bottom: 1px dashed rgba($col-panel-contrast-a50, 0.2);
+}
