@@ -8,25 +8,25 @@ $footer-min-height: 20px;
 }
 
 .header-ctnr {
+  background-color: $col-bg-dark;
   position: relative;
   z-index: $zidx-header;
-  height: $header-height;
 
   //box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
 
+}
+
+.header {
+  height: $header-height;
   @include tablet-to-tablet-large {
     height: $header-height-md;
   }
   @include desktop-small-plus {
     height: $header-height-lg;
   }
-}
-
-.header {
-  background-color: $col-bg-dark;
-  padding: $pad $pad-2;
+  @include paddingVertical($pad);
   @include tablet-plus {
-    padding: $pad-2 $pad-3;
+    @include paddingVertical($pad-2);
   }
 }
 

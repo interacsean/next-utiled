@@ -7,6 +7,7 @@ import Nav from '../../modules/Nav';
 
 import { MainLayoutProps } from './MainLayout.props';
 import css from './MainLayout.module.scss';
+import commonCss from '../../pages/common.module.scss';
 import routes from '../../../../consts/ROUTE_PATHS';
 import Footer from '../../modules/Footer';
 
@@ -21,19 +22,22 @@ const MainLayoutView: FC<MainLayoutProps> = (props: MainLayoutProps) => {
         css['container'],
       ]}
     >
-      <Box
-        tagName={'header'}
-        className={[
-          'flex --sec-center --pri-space-between',
-          css['header-ctnr'],
-          css.header,
-        ]}
-      >
-        <Box onClick={() => router.push(routes.ROOT.path)}>
-          <Logo />
-        </Box>
-        <Box tagName={'nav'}>
-          <Nav />
+      <Box className={[commonCss.contentWrapper, css['header-ctnr']]}>
+        <Box
+          tagName={'header'}
+          className={[
+            commonCss.contentInner,
+            commonCss['--padded'],
+            'flex --sec-center --pri-space-between',
+            css.header,
+          ]}
+        >
+          <Box onClick={() => router.push(routes.ROOT)}>
+            <Logo />
+          </Box>
+          <Box tagName={'nav'}>
+            <Nav />
+          </Box>
         </Box>
       </Box>
       <Box
