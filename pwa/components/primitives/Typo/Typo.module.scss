@@ -42,8 +42,8 @@
       color: $col-content-on-dark;
     }
   }
-  + p {
-    margin-top: 0.67em;
+  &:not(.--no-margin) {
+    margin-bottom: 1em;
   }
 }
 

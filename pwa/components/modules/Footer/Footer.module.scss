@@ -26,6 +26,14 @@
   }
 }
 
+.footer {
+  @include tablet-plus {
+    width: 70%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
 .copyright {
   color: $col-content-caption-on-dark;
 }

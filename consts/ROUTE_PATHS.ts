@@ -4,6 +4,7 @@
  */
 const ROUTE_PATHS = {
   ROOT: '/',
+  CONTACT: '/contact',
   NOT_FOUND: '/404',
 };
 

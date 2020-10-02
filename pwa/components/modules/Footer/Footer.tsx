@@ -10,119 +10,46 @@ import { CompWithChildren } from '../../../../types/util/CompWithChildren';
 import clx from '../../../../utils/Html/clx';
 import { useModalContext } from '../../primitives/Modal/ModalProvider';
 
+import commonCss from '../../pages/common.module.scss';
+import InputLabelInline from '../../primitives/InputLabelInline/InputLabelInline';
+import InputLabel from '../../layouts/InputLabel';
+import Input from '../../primitives/Input/Input.view';
+import Button from '../../primitives/Button';
+
 type FooterProps = {};
-
-const CALCULATORS: [string, string][] = [
-  ['long-call', 'Call option calculator'],
-  ['long-put', 'Put option calculator'],
-  ['bearish-call-credit-spread', 'Call credit spread calculator'],
-  ['bullish-put-credit-spread', 'Put credit spread calculator'],
-  ['iron-condor', 'Iron condor calculator'],
-  ['straddle', 'Straddle calculator'],
-];
-
-const LEARN_OPTIONS: [string, string][] = [
-  ['path', 'Introduction to options trading'],
-];
-
-const Group = ({ children }: CompWithChildren) => (
-  <Box className={css.group} mb={1}>
-    {children}
-  </Box>
-);
-const MenuHeader = ({ children }: CompWithChildren) => (
-  <T className={css._header} content mb={1 / 2}>
-    {children}
-  </T>
-);
-const MenuBody = ({ children }: CompWithChildren) => (
-  <Box tagName={'ul'} className={css._menu} flex-col flex-sec={'start'}>
-    {children}
-  </Box>
-);
 
 const Footer: FC<FooterProps> = (
   props: FooterProps,
 ): ReturnType<typeof Box> => {
   const { showModal, hideModal } = useModalContext();
 
-  const onSettingsClick = useCallback(
-    () => {
-    },
-    [showModal, hideModal],
-  );
-
-  const onLoginClick = useCallback(
+  const onSubscribe = useCallback(
     () => {
 
     },
     [showModal, hideModal],
   );
+
+  const [ mailingEmail, setMailingEmail ] = React.useState('');
 
   return (
-    <Box>
-      <Box flex-pri={'stretch'} flex-wrap className={'theme-override--dark'}>
-        {/*<Group>*/}
-        {/*  <MenuHeader>Calculators</MenuHeader>*/}
-        {/*  <MenuBody>*/}
-        {/*    {CALCULATORS.map((linkInfo) => (*/}
-        {/*      <Link*/}
-        {/*        className={css._link}*/}
-        {/*        key={linkInfo[0]}*/}
-        {/*        to={ROUTE_PATHS.ROOT}*/}
-        {/*        payload={{ strat: linkInfo[0] }}*/}
-        {/*      >*/}
-        {/*        {linkInfo[1]}*/}
-        {/*      </Link>*/}
-        {/*    ))}*/}
-        {/*    <Link*/}
-        {/*      className={clx([css._link, css['--more']])}*/}
-        {/*      to={ROUTE_PATHS.ROOT}*/}
-        {/*    >*/}
-        {/*      See all calculators...*/}
-        {/*    </Link>*/}
-        {/*  </MenuBody>*/}
-        {/*</Group>*/}
-        {/*<Group>*/}
-        {/*  <MenuHeader>Learn Options</MenuHeader>*/}
-        {/*  <MenuBody>*/}
-        {/*    {LEARN_OPTIONS.map((linkInfo) => (*/}
-        {/*      <Link className={css._link} key={linkInfo[0]} to={linkInfo[0]}>*/}
-        {/*        {linkInfo[1]}*/}
-        {/*      </Link>*/}
-        {/*    ))}*/}
-        {/*    <Link*/}
-        {/*      className={clx([css._link, css['--more']])}*/}
-        {/*      to={ROUTE_PATHS.ROOT}*/}
-        {/*    >*/}
-        {/*      More education...*/}
-        {/*    </Link>*/}
-        {/*  </MenuBody>*/}
-        {/*</Group>*/}
-        {/*<Group>*/}
-        {/*  <MenuHeader>Features</MenuHeader>*/}
-        {/*  <MenuBody>*/}
-        {/*    <>{null}</>*/}
-        {/*  </MenuBody>*/}
-        {/*</Group>*/}
-        {/*<Group>*/}
-        {/*  <MenuHeader>Help</MenuHeader>*/}
-        {/*  <MenuBody>*/}
-        {/*    <>{null}</>*/}
-        {/*  </MenuBody>*/}
-        {/*</Group>*/}
-        {/*<Group>*/}
-        {/*  <MenuHeader>About</MenuHeader>*/}
-        {/*  <MenuBody>*/}
-        {/*    <>{null}</>*/}
-        {/*  </MenuBody>*/}
-        {/*</Group>*/}
-        {/*<Group>*/}
-        {/*  <MenuHeader>Account</MenuHeader>*/}
-        {/*</Group>*/}
+    <Box className={commonCss.contentWrapper}>
+      <Box className={[css.footer, 'theme-override--dark']}>
+        <T h3>Stay up to date</T>
+        <T content>Join our mailing list.  We'll let you know about upcoming events and the occasional news.</T>
+        <Box flex-pri="end" mh={2}>
+          <Input
+            value={mailingEmail}
+            onChange={setMailingEmail}
+            placeholder={'Email address'}
+          />
+          <Box ml={1}>
+            <Button text={'Join'} onClick={onSubscribe} />
+          </Box>
+        </Box>
       </Box>
-      <T className={[css.copyright, 'align-center']} mt={2}>
-        Humane Technology Australia
+      <T className={[css.copyright, 'align-center']} mt={3}>
+        Humane Technology Australia, Sydney Australia
       </T>
     </Box>
   );

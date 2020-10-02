@@ -10,7 +10,7 @@
   transition: background-color $txn-swift;
 
   &.--is-enabled {
-    background-color: $col-primary-darkaqua;
+    background-color: $col-primary-hotpink;
     > ._toggle {
       left: calc(100% - 21px);
     }

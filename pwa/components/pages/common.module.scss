@@ -5,11 +5,34 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  &.__contrast {
+    background-color: $col-light-dk1;
+  }
 }
 .contentInner {
   width: 100%;
   max-width: 1280px;
-  &.--padded {
+  &:not(.--no-pad) {
     @include paddingHorizontal($pad);
+    @include tablet-plus {
+      @include paddingHorizontal($pad-3);
+    }
+  }
+}
+
+.indentedContented {
+  margin-left: 3rem;
+  @include tablet-plus {
+    max-width: 40em;
+    margin-left: 8rem;
+    margin-right: 12rem;
+  }
+}
+
+.section {
+  @include paddingVertical($pad-2);
+  @include tablet-plus {
+    @include paddingVertical($pad-4);
   }
 }

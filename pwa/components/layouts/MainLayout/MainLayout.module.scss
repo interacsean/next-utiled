@@ -35,9 +35,9 @@ $footer-min-height: 20px;
 }
 
 .footer-ctnr {
-  padding: $pad;
+  @include paddingVertical($pad);
   @include tablet-plus {
-    padding: $pad-2;
+    @include paddingVertical($pad-3);
   }
   min-height: $footer-min-height;
   > ._footer {

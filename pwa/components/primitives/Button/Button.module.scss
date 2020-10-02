@@ -24,7 +24,7 @@ $h-xs: 24px;
   border-width: 0;
 
   // primary
-  background-color: $col-primary-darkaqua;
+  background-color: $col-primary-hotpink;
 
   // size medium
   line-height: $h-m;
@@ -57,7 +57,7 @@ $h-xs: 24px;
 }
 
 .--style-secondary {
-  background-color: $col-secondary-orange;
+  background-color: $col-secondary-afternoonsky;
 }
 
 .--style-tertiary {
@@ -86,8 +86,8 @@ $h-xs: 24px;
   }
 
   &.--style-secondary {
-    border-color: $col-secondary-orange;
-    color: $col-secondary-orange;
+    border-color: $col-secondary-afternoonsky;
+    color: $col-secondary-afternoonsky;
   }
   &.--style-tertiary {
     border-color: $col-tertiary-darkgray-dk1;
