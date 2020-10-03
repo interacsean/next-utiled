@@ -2,7 +2,7 @@
 
 .hero {
   height: 70vh;
-  max-height: 59vw;
+  max-height: 59vw; // based on image aspect ratio
   background-image:
           linear-gradient(15deg, rgba(0, 0, 0, 0.7) 25%, rgba(0, 0, 0, 0) 55%),
           url("/images/site/pexels-edwin-josé-vega-ramos-2039634_01.jpg");
@@ -10,19 +10,6 @@
   background-position: 100% 15%;
   ._blurb {
     color: $col-light;
-    @include tablet-to-tablet-large {
-      margin-bottom: $pad-2;
-    }
-    @include desktop-small-plus {
-      margin-bottom: $pad-3
-    }
-
-    > ._humans {
-      background-color: $col-primary-hotpink;
-    }
-    > ._technology {
-      background-color: $col-secondary-afternoonsky;
-    }
   }
 }
 
