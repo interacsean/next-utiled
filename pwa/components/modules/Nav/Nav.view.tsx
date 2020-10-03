@@ -15,10 +15,8 @@ import MobileMenu from '../../primitives/MobileMenu';
 import { useModalContext } from '../../primitives/Modal/ModalProvider';
 
 import useModal from '../../primitives/Modal/useModal';
-import AccountMenuMobile from './AccountMenuMobile';
 import css from './Nav.module.scss';
 import { NavProps } from './Nav.props';
-import ProfileLinks from './ProfileLinks';
 import StaticNavLinks from './StaticNavLinks.view';
 
 const NavView: FC<NavProps> = (props: NavProps): ReactElement<'div'> => {

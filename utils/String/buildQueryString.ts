@@ -1,4 +1,4 @@
-import { ObjRecord } from 'opc-types/lib/util/ObjRecord';
+import { ObjRecord } from '../../types/util/ObjRecord';
 
 const buildQueryString = (params: ObjRecord<string | number>) =>
   Object.keys(params)

@@ -87,13 +87,13 @@ const T: FC<TypoPublicProps> = ({
     <Tag
       {...tagProps}
       className={clx(
-        [
+        ([
           css[typeClass],
           props.anemic && css['--is-anemic'],
           props.clickable && css['--is-clickable'],
           props.subtle && css['--subtle'],
           props['no-weight'] && css['--no-weight'],
-        ]
+        ] as (string | undefined | false)[])
           .concat(utilClasses)
           .concat(className || []),
       )}

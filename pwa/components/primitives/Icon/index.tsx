@@ -4,6 +4,7 @@ import clx from '../../../../utils/Html/clx';
 
 import AppleIcon from '../../../../public/images/icons/apple.svg'
 import CloseIcon from '../../../../public/images/icons/close.svg';
+import LoadingIcon from '../../../../public/images/icons/loading.svg';
 // import StrategyDoubleDiagonalSpread from '../../../../public/images/icons/strategy-double-diagonal-spread.svg';
 
 import { IconProps } from './Icon.props';
@@ -13,7 +14,7 @@ import css from './Icon.module.scss';
 export const validIconMap = {
   apple: AppleIcon,
   close: CloseIcon,
-  // 'strategy-double-diagonal-spread': StrategyDoubleDiagonalSpread,
+  loading: LoadingIcon,
 };
 
 const Icon: FC<IconProps> = (props: IconProps) => {
