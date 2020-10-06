@@ -70,7 +70,7 @@ const Contact: NextPage = () => {
           <T content>If you'd like to get involved or just have questions about what we do or what's going on,
           send us a message</T>
           <Box className={commonCss.indentedContented} mv={4}>
-            <form ref={formRef} onClick={submit}>
+            <form ref={formRef} onSubmit={submit}>
               <input type="hidden" name="form-name" value="contact" />
               <Box mb={1} style={{ maxWidth: '20em' }}>
                 <InputLabel inline label="Your name">
