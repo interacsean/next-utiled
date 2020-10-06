@@ -12,7 +12,10 @@
 }
 .contentInner {
   width: 100%;
-  max-width: 1280px;
+  max-width: 1200px;
+  &.__textContent {
+    max-width: 60em;
+  }
   &:not(.--no-pad) {
     @include paddingHorizontal($pad);
     @include tablet-plus {
@@ -24,9 +27,9 @@
 .indentedContented {
   margin-left: 3rem;
   @include tablet-plus {
+    margin-left: auto;
+    margin-right: auto;
     max-width: 40em;
-    margin-left: 8rem;
-    margin-right: 12rem;
   }
 }
 

@@ -28,7 +28,7 @@
 
 .content--anemic {
   font-size: toRem(18px);
-  line-height: 167%;
+  line-height: 175%;
   font-family: $font-content;
 }
 .content {
@@ -43,12 +43,12 @@
     }
   }
   &:not(.--no-margin) {
-    margin-bottom: 1em;
+    margin-bottom: 1.7em;
   }
 }
 
 .content-feature--anemic {
-  font-size: toRem(22px);
+  font-size: toRem(20px);
   line-height: 157%;
   font-family: $font-content;
   + p {
@@ -64,6 +64,9 @@
     @include theme-dark {
       color: $col-content-on-dark;
     }
+  }
+  &:not(.--no-margin) {
+    margin-bottom: 1.7em;
   }
 }
 

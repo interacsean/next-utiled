@@ -59,7 +59,7 @@ body {
   @include tablet-to-tablet-large {
     font-size: #{$base-font-size * 15.25/16};
   }
-  @include desktop-large-plus {
+  @include desktop-small-plus {
     font-size: $base-font-size;
   }
 }
