@@ -73,6 +73,7 @@ $nav-ghost-underline: 1px solid transparent;
   }
 
   > ._link {
+    position: relative;
     font-family: $font-headings;
     font-size: toRem(16px);
     font-weight: $font-weight-medium;
@@ -104,16 +105,34 @@ $nav-ghost-underline: 1px solid transparent;
     @include theme-dark() {
       @include font-color();
     }
-    border-bottom: $nav-ghost-underline;
+    //border-bottom: $nav-ghost-underline;
 
     &.--active {
-      border-bottom: $nav-underline;
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: -3px;
+        left: 0.33em;
+        width: 30px;
+        height: 3px;
+        background-color: $col-primary-hotpink;
+      }
+      //border-bottom: $nav-underline;
     }
     .mobileMenu:hover &:hover {
-      border-bottom: $nav-underline-hover;
-
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: -3px;
+        left: 0.33em;
+        width: 3px;
+        height: 3px;
+        background-color: $col-primary-hotpink;
+      }
       &.--active {
-        border-bottom: $nav-underline;
+        &:before {
+          width: 30px;
+        }
       }
     }
   }

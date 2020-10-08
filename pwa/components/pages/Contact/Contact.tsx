@@ -72,7 +72,7 @@ const Contact: NextPage = () => {
           <Box className={commonCss.indentedContented} mv={4}>
             <form ref={formRef} onSubmit={submit}>
               <input type="hidden" name="form-name" value="contact" />
-              <Box mb={1} style={{ maxWidth: '20em' }}>
+              <Box mb={2} className={css.lineInput}>
                 <InputLabel inline label="Your name">
                   <Input
                     value={form.name}
@@ -81,7 +81,7 @@ const Contact: NextPage = () => {
                   />
                 </InputLabel>
               </Box>
-              <Box mb={1} style={{ maxWidth: '20em' }}>
+              <Box mb={2} className={css.lineInput}>
                 <InputLabel inline label="Email">
                   <Input
                     value={form.email}
@@ -90,7 +90,7 @@ const Contact: NextPage = () => {
                   />
                 </InputLabel>
               </Box>
-              <Box mb={1} style={{ maxWidth: '40em' }}>
+              <Box mb={2} style={{ maxWidth: '40em' }}>
                 <InputLabel inline label="Message">
                   <textarea
                     className={css.messageBox}

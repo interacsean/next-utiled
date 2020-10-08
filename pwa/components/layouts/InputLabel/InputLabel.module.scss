@@ -2,6 +2,9 @@
 
 .container {
   &.--inline {
+    > ._label > ._labelText {
+      margin-bottom: $pad-1-4;
+    }
   }
   &.--side-by-side {
     > ._label {

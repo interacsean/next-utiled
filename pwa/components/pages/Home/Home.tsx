@@ -10,6 +10,7 @@ import css from './Home.module.scss';
 import commonCss from '../common.module.scss';
 import Link from '../../primitives/Link/Link.view';
 import ROUTE_PATHS from '../../../../consts/ROUTE_PATHS';
+import GridCols from '../../primitives/GridCols';
 
 type HomePublicProps = {};
 
@@ -33,18 +34,44 @@ const Home: NextPage<HomePublicProps> = (
           </T>
           <Box className={commonCss.indentedContented}>
             <T content>
-              The biggest tech companies in the world make their money by coaxing you into spending more time on their platform and selling targeted advertising by understanding as much as they can about you and your personality.
+              The biggest tech companies in the world profit by coaxing you into spending more time on their platform,
+              building a detailed profile of your personality and selling targeted advertising.  But signing over access
+              to your personal data and losing a few hours is only the start of the problem.
             </T>
             <T content>
-              The problem is not so much that platforms are consuming more of our time, or even that we have to sign over access to our data for these companies to be profitable.
-            </T>
-            <T content>
-              The bigger problem is that the most effective way to win our attention is to feed us divisive, belief-reaffirming, often misinformed content, with no regard to the ill-effects on our mental health, the capability of the population to make educated, democratic decisions, or the loss of cohesion and unity we feel as a society.
+              The bigger issue is that the most effective way to win our attention is by feeding us divisive and often
+              misinformed content, with no regard to our mental health,
+              the loss of cohesion we feel as a society, or the viability of the rational public discourse necessary
+              for democracy.
             </T>
           </Box>
-          <Box mv={4} mh={4}>
-            <Hr />
-          </Box>
+        </Box>
+      </Box>
+      <Box className={[commonCss.contentWrapper, commonCss.__dark, 'theme--inverse']}>
+        <Box className={[commonCss.contentInner, commonCss.section]}>
+          <T h2>Humane Technology</T>
+          <T content-feature>We see the solution happening in three distinct areas</T>
+          <GridCols>
+            <Box className={'_cols-12 _cols-dsk-plus-4'}>
+              <T h1 tagName="p">1.</T>
+              <T h3 tagName={"h4"}>Individual awareness</T>
+              <T content>Raise community concern about the problem</T>
+            </Box>
+            <Box className={'_cols-12 _cols-dsk-plus-4'}>
+              <T h1 tagName="p">2.</T>
+              <T h3 tagName={"h4"}>Government protections</T>
+              <T content>Put pressure on governments to act in our best interests</T>
+            </Box>
+            <Box className={'_cols-12 _cols-dsk-plus-4'}>
+              <T h1 tagName="p">3.</T>
+              <T h3 tagName={"h4"}>Technology companies</T>
+              <T content>Change through internal culture, market forces and legislative pressures</T>
+            </Box>
+          </GridCols>
+        </Box>
+      </Box>
+      <Box className={[commonCss.contentWrapper]}>
+        <Box className={[commonCss.contentInner, commonCss.__textContent, commonCss.section]}>
           <T h3 className={css.notchedHeading}>What we're about</T>
           <Box className={commonCss.indentedContented}>
             <T content>
@@ -81,11 +108,11 @@ const Home: NextPage<HomePublicProps> = (
             {/*  <Link to={ROUTE_PATHS.ROOT}>Meet the team</Link>*/}
             {/*</T>*/}
           </Box>
-          <T content-feature>
+          <T content>
             <strong>If you care about these things too</strong>, join our mailing list to keep
             up to date on what’s happening.
           </T>
-          <T content-feature>
+          <T content>
             <strong>If you’d like to get involved</strong>, <Link to={ROUTE_PATHS.CONTACT}>contact us</Link> to see how you can help.
           </T>
         </Box>
