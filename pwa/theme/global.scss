@@ -17,18 +17,18 @@ a,
   @include theme-light--global {
     color: $col-link;
     &:hover {
-      color: lighten($col-link, 20%);
+      color: lighten($col-link, 10%);
     }
     &:active {
-      color: lighten($col-link, 37%);
+      color: lighten($col-link, 20%);
     }
     &:visited {
       color: $col-link-visited;
       &:hover {
-        color: lighten($col-link-visited, 20%);
+        color: lighten($col-link-visited, 10%);
       }
       &:active {
-        color: lighten($col-link-visited, 37%);
+        color: lighten($col-link-visited, 20%);
       }
     }
   }

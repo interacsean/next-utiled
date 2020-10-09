@@ -51,7 +51,7 @@ const Footer: FC<FooterProps> = (
   return (
     <Box className={commonCss.contentWrapper}>
       <Box className={[css.footer, 'theme-override--dark']}>
-        <T h3>Stay up to date</T>
+        <T h3 mb={1}>Stay up to date</T>
         <T content>Join our mailing list.  We'll let you know about upcoming events and the occasional news.</T>
         <form ref={formRef} onSubmit={onSubscribe}>
           <input type="hidden" name="form-name" value="newsletter" />

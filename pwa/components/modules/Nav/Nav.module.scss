@@ -1,7 +1,7 @@
 @import '../../../theme/common';
 
 $nav-underline: 1.4px solid $col-primary-hotpink;
-$nav-underline-hover: 1px solid transparentize($col-primary-hotpink, 0.3);
+$nav-underline-hover: 1px solid transparentize($col-primary-hotpink, 0.2);
 $nav-ghost-underline: 1px solid transparent;
 
 .mobileMenu {
@@ -89,7 +89,7 @@ $nav-ghost-underline: 1px solid transparent;
       text-decoration: none;
     }
 
-    padding: 0.3em 0.33em;
+    padding: 0.3em 0.35em;
     @include mobile-menu-size {
       margin-left: 0;
     }
@@ -105,16 +105,16 @@ $nav-ghost-underline: 1px solid transparent;
     @include theme-dark() {
       @include font-color();
     }
-    //border-bottom: $nav-ghost-underline;
 
+    border-bottom: $nav-ghost-underline;
     &.--active {
       &:before {
         content: '';
         position: absolute;
-        bottom: -3px;
+        bottom: 0;
         left: 0.33em;
-        width: 30px;
-        height: 3px;
+        right: 0.33em;
+        height: 1.5px;
         background-color: $col-primary-hotpink;
       }
       //border-bottom: $nav-underline;
@@ -123,16 +123,13 @@ $nav-ghost-underline: 1px solid transparent;
       &:before {
         content: '';
         position: absolute;
-        bottom: -3px;
+        bottom: 0;
         left: 0.33em;
-        width: 3px;
-        height: 3px;
-        background-color: $col-primary-hotpink;
+        right: 0.33em;
+        height: 1.5px;
+        background-color: transparentize($col-primary-hotpink, 0.1);
       }
       &.--active {
-        &:before {
-          width: 30px;
-        }
       }
     }
   }
