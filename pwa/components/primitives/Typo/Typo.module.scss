@@ -26,9 +26,21 @@
   }
 }
 
+@mixin formattable-content($marginTop: 1em, $marginBottom: 1em) {
+  :global(.formatted-content) > &:not(:first-child) {
+    margin-top: $marginTop;
+  }
+  :global(.formatted-content) > &:not(:last-child) {
+    margin-bottom: $marginBottom;
+  }
+}
+
 .content--anemic {
+  &:not(.--no-margin) {
+    @include formattable-content(0.7em, 1.4em);
+  }
   font-size: toRem(18px);
-  line-height: 161%;
+  line-height: 165%;
   font-family: $font-content;
 }
 .content {
@@ -42,18 +54,15 @@
       color: $col-content-on-dark;
     }
   }
-  &:not(.--no-margin) {
-    margin-bottom: 1.7em;
-  }
 }
 
 .content-feature--anemic {
+  &:not(.--no-margin) {
+    @include formattable-content(0.7em, 1.4em);
+  }
   font-size: toRem(20px);
   line-height: 157%;
   font-family: $font-content;
-  + p {
-    margin-top: 1em;
-  }
 }
 .content-feature {
   @extend .content-feature--anemic;
@@ -64,9 +73,6 @@
     @include theme-dark {
       color: $col-content-on-dark;
     }
-  }
-  &:not(.--no-margin) {
-    margin-bottom: 1.7em;
   }
 }
 
@@ -88,6 +94,9 @@
 }
 
 .content-detail--anemic {
+  &:not(.--no-margin) {
+    @include formattable-content();
+  }
   font-size: toRem(13.5px);
   font-family: $font-content;
 }
@@ -252,6 +261,9 @@
 }
 
 .h1--anemic {
+  &:not(.--no-margin) {
+    @include formattable-content(0.7em, 0.5em);
+  }
   font-size: toRem(64px);
   @include mobile-only {
     font-size: toRem(40px);
@@ -273,6 +285,9 @@
 }
 
 .h2--anemic {
+  &:not(.--no-margin) {
+    @include formattable-content(0.7em, 0.5em);
+  }
   font-size: toRem(39px);
   @include mobile-only {
     font-size: toRem(30px);
@@ -294,6 +309,9 @@
 }
 
 .h3--anemic {
+  &:not(.--no-margin) {
+    @include formattable-content(0.7em, 0.5em);
+  }
   font-size: toRem(28px);
   @include mobile-only {
     font-size: toRem(24px);
@@ -315,6 +333,9 @@
 }
 
 .h4--anemic {
+  &:not(.--no-margin) {
+    @include formattable-content(0.7em, 0.5em);
+  }
   font-size: toRem(21px);
   line-height: 117%;
   font-weight: $font-weight-bold;
@@ -333,6 +354,9 @@
 }
 
 .h5--anemic {
+  &:not(.--no-margin) {
+    @include formattable-content(0.7em, 0.5em);
+  }
   font-size: toRem(18px);
   line-height: 117%;
   font-family: $font-headings;

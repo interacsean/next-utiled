@@ -28,3 +28,9 @@
     max-width: 20em;
   }
 }
+
+.buttonHolder {
+  @include tablet-plus {
+    display: inline-block;
+  }
+}

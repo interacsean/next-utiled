@@ -54,6 +54,7 @@ const NON_TAG_PROPS = VALID_TYPES.concat([
   'subtle',
   'no-weight',
   'tagName',
+  'no-margin',
   'mt',
   'mr',
   'mb',
@@ -92,6 +93,7 @@ const T: FC<TypoPublicProps> = ({
           props.anemic && css['--is-anemic'],
           props.clickable && css['--is-clickable'],
           props.subtle && css['--subtle'],
+          props['no-margin'] && css['--no-margin'],
           props['no-weight'] && css['--no-weight'],
         ] as (string | undefined | false)[])
           .concat(utilClasses)

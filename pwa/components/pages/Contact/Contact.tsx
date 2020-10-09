@@ -14,16 +14,14 @@ import Button from '../../primitives/Button';
 import commonCss from '../common.module.scss';
 import css from './Contact.module.scss';
 import GridCols from '../../primitives/GridCols';
-import useMediaQuery from '../../../../utils/Hooks/useMediaQuery';
 
 const DEFAULT_FORM = {
   name: '',
   email: '',
   message: '',
-}
+};
 
 const Contact: NextPage = () => {
-  const isMob = useMediaQuery("mobile-only");
   const [ form, setForm ] = React.useState(DEFAULT_FORM);
   const [ isSending, setIsSending ] = React.useState(false);
   const [ msgReceived, setMsgRecieved ] = React.useState(false);
@@ -111,7 +109,9 @@ const Contact: NextPage = () => {
                   <T className={'text-success'}>Your message has been received</T>
                 )
               }
-              <Button loading={isSending} text={'Send'} type="submit" full-width={isMob}/>
+              <Box className={css.buttonHolder}>
+                <Button loading={isSending} text={'Send'} type="submit" full-width />
+              </Box>
             </form>
           </Box>
         </Box>

@@ -24,33 +24,6 @@ const StaticNavLinks = ({ closeMenu, isMobileSize }: StaticNavLinksProps) => {
           What we're about
         </Link>
       </Box>
-      {/*<Box onClick={closeMenu} className={css['nav-link-ctnr']}>*/}
-      {/*  <Link*/}
-      {/*    to={ROUTE_PATHS.ROOT}*/}
-      {/*    className={css._link}*/}
-      {/*    activeClass={css['--active']}*/}
-      {/*  >*/}
-      {/*    Activities*/}
-      {/*  </Link>*/}
-      {/*</Box>*/}
-      {/*<Box onClick={closeMenu} className={css['nav-link-ctnr']}>*/}
-      {/*  <Link*/}
-      {/*    to={ROUTE_PATHS.ROOT}*/}
-      {/*    className={css._link}*/}
-      {/*    activeClass={css['--active']}*/}
-      {/*  >*/}
-      {/*    The Pledge*/}
-      {/*  </Link>*/}
-      {/*</Box>*/}
-      {/*<Box onClick={closeMenu} className={css['nav-link-ctnr']}>*/}
-      {/*  <Link*/}
-      {/*    to={ROUTE_PATHS.ROOT}*/}
-      {/*    className={css._link}*/}
-      {/*    activeClass={css['--active']}*/}
-      {/*  >*/}
-      {/*    Resources*/}
-      {/*  </Link>*/}
-      {/*</Box>*/}
       <Box onClick={closeMenu} className={css['nav-link-ctnr']}>
         <Link
           to={ROUTE_PATHS.CONTACT}

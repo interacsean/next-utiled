@@ -16,6 +16,7 @@ export interface TypoPublicProps
   anemic?: boolean;
   htmlFor?: string;
   'no-weight'?: boolean;
+  'no-margin'?: boolean;
   clickable?: boolean;
   subtle?: boolean;
   /* content types */
