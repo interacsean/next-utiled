@@ -46,11 +46,12 @@ const Home: NextPage<HomePublicProps> = (
                   <T h5 no-margin>23 October 2020</T>
                   <T h4 no-margin mb={1 / 2}>Spark Festival Panel</T>
                   <T content-pragmatic>
-                    Join us for our premiere panel discussion with:
+                    Join us for our premiere panel discussion featuring:
                     <ul>
                       <li>Nir Eyal (Best-selling Author)</li>
                       <li>Fontaine Foxworth (Google)</li>
                       <li>Joseph Gentle (Prismatik)</li>
+                      <li>Hosted by James Addison (Humane Technology Australia)</li>
                     </ul>
                   </T>
                 </Card>
@@ -109,17 +110,22 @@ const Home: NextPage<HomePublicProps> = (
             </T>
             <T h4 mb={1 / 2}>Building awareness</T>
             <T content>
-              The more people who understand the nature and severity of the issue, the more pressure there will be on technology platforms to operate in a way that respects individual users.
+              The more people who understand the nature and severity of the issue, the better people will be able to manage our relationship with technology, for the well-being of individual citizens, the economy, and the community.
             </T>
             <T content>
-              HTA brings together the best minds in the field to share insights and foster discussion amongst leaders and creators so that the people who are building the tools of today and tomorrow have an understanding of ethical best practices, and can share their own experiences.  We're also on the pulse of news and developments to share stories (subscribe or follow us for updates).
+              To solve any problem, we first must start with discussion to understand different perspectives and offer fresh ideas.  HTA is dedicated to creating constructive conversations, not adversarial debates. We understand the value of listening to different perspectives, and not talking to 'be right' or impress others.
+            </T>
+            <T content>
+              HTA brings together the best minds in a variety of fields to share insights and foster discussion amongst leaders and creators. We create these spaces so that the people who are building the tools of tomorrow have an understanding of ethical best practices and impact on human well-being.  We're also on the pulse of news and developments to share stories (subscribe or follow us for updates).
             </T>
             <T h4 mb={1 / 2}>Advocacy</T>
             <T content>
-              Our goal is to ensure that policy decisions consider the well-being of Australian technology users, and preserve the integrity of public opinion by minimising artificial causes of polarisation.
+              Our goal is to ensure that policy decisions consider the well-being of Australian technology users, and
+              preserve the integrity of public opinion by minimising technology-driven polarisation.
             </T>
             <T content>
-              To achieve this, we connect government with industry experts to encourage conversation and understanding so policy-makers have the support to make these well-informed decisions.
+              To achieve this, we connect government with industry experts to encourage conversation and understanding
+              so policy-makers have the support to make these well-informed decisions.
             </T>
           </Box>
         </Box>
@@ -129,10 +135,11 @@ const Home: NextPage<HomePublicProps> = (
           <T h3 className={css.notchedHeading}>Who we are</T>
           <Box className={[commonCss.indentedContented, 'formatted-content']}>
             <T content>
-              We're just a handful of people who care about the survival of personal well-being and living in a thriving, cooperative society.
+              We’re just a handful of people who believe that in order to live in a thriving, cooperative
+              society, we need to re-examine our relationship with technology.
             </T>
             <T content>
-              <strong>If you care about these things too</strong>, join our mailing list to keep
+              <strong>If you care about these things too</strong>, <a href='#mailinglist'>join our mailing</a> list to keep
               up to date on what’s happening.
             </T>
             <T content>
