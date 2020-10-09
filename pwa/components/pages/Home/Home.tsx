@@ -21,9 +21,9 @@ const Home: NextPage<HomePublicProps> = (
     <MainLayout>
       <Box className={[css.hero, commonCss.contentWrapper]} flex-col flex-pri="end">
         <Box className={[commonCss.contentInner]} pv={1} flex-col flex-pri="end" flex-sec="start">
-          <T h2 anemic className={css._blurb}>
             <span className={css._humans}>Humans</span> should use <span className={css._technology}>technology</span>,<br />
             not the other way around
+          <T anemic className={css._blurb}>
           </T>
         </Box>
       </Box>

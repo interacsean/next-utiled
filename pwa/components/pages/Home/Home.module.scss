@@ -10,10 +10,16 @@
   background-position: 100% 15%;
   ._blurb {
     color: $col-light;
+    font-family: $font-headings;
+    font-weight: $font-weight-semibold;
+    font-size: toRem(22px);
+    line-height: 140%;
     @include tablet-to-tablet-large {
+      font-size: toRem(42px);
       @include paddingVertical($pad-2);
     }
     @include desktop-small-plus {
+      font-size: toRem(42px);
       @include paddingVertical($pad-3);
     }
     > ._humans {

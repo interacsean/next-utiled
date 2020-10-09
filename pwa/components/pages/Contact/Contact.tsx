@@ -13,6 +13,8 @@ import Button from '../../primitives/Button';
 
 import commonCss from '../common.module.scss';
 import css from './Contact.module.scss';
+import GridCols from '../../primitives/GridCols';
+import useMediaQuery from '../../../../utils/Hooks/useMediaQuery';
 
 const DEFAULT_FORM = {
   name: '',
@@ -21,6 +23,7 @@ const DEFAULT_FORM = {
 }
 
 const Contact: NextPage = () => {
+  const isMob = useMediaQuery("mobile-only");
   const [ form, setForm ] = React.useState(DEFAULT_FORM);
   const [ isSending, setIsSending ] = React.useState(false);
   const [ msgReceived, setMsgRecieved ] = React.useState(false);
@@ -72,41 +75,43 @@ const Contact: NextPage = () => {
           <Box className={commonCss.indentedContented} mv={4}>
             <form ref={formRef} onSubmit={submit}>
               <input type="hidden" name="form-name" value="contact" />
-              <Box mb={2} className={css.lineInput}>
-                <InputLabel inline label="Your name">
-                  <Input
-                    value={form.name}
-                    onChange={updateField}
-                    data-field={'name'}
-                  />
-                </InputLabel>
-              </Box>
-              <Box mb={2} className={css.lineInput}>
-                <InputLabel inline label="Email">
-                  <Input
-                    value={form.email}
-                    onChange={updateField}
-                    data-field={'email'}
-                  />
-                </InputLabel>
-              </Box>
-              <Box mb={2} style={{ maxWidth: '40em' }}>
-                <InputLabel inline label="Message">
-                  <textarea
-                    className={css.messageBox}
-                    value={form.message}
-                    data-field={'message'}
-                    onChange={(e) => updateField(e.target.value, e)}
-                    rows={4}
-                  />
-                </InputLabel>
-              </Box>
+              <GridCols>
+                <Box mb={2} className={['_cols-12 _cols-tab-plus-6', css.lineInput]}>
+                  <InputLabel inline label="Your name">
+                    <Input
+                      value={form.name}
+                      onChange={updateField}
+                      data-field={'name'}
+                    />
+                  </InputLabel>
+                </Box>
+                <Box mb={2} className={['_cols-12 _cols-tab-plus-6', css.lineInput]}>
+                  <InputLabel inline label="Email">
+                    <Input
+                      value={form.email}
+                      onChange={updateField}
+                      data-field={'email'}
+                    />
+                  </InputLabel>
+                </Box>
+                <Box mb={2} className={'_cols-12'}>
+                  <InputLabel inline label="Message">
+                    <textarea
+                      className={css.messageBox}
+                      value={form.message}
+                      data-field={'message'}
+                      onChange={(e) => updateField(e.target.value, e)}
+                      rows={4}
+                    />
+                  </InputLabel>
+                </Box>
+              </GridCols>
               {
                 msgReceived && (
                   <T className={'text-success'}>Your message has been received</T>
                 )
               }
-              <Button loading={isSending} text={'Send'} type="submit" />
+              <Button loading={isSending} text={'Send'} type="submit" full-width={isMob}/>
             </form>
           </Box>
         </Box>

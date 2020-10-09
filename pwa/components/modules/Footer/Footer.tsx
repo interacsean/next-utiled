@@ -9,6 +9,7 @@ import Button from '../../primitives/Button';
 
 import commonCss from '../../pages/common.module.scss';
 import css from './Footer.module.scss';
+import GridCols from '../../primitives/GridCols';
 
 type FooterProps = {};
 
@@ -54,16 +55,17 @@ const Footer: FC<FooterProps> = (
         <T content>Join our mailing list.  We'll let you know about upcoming events and the occasional news.</T>
         <form ref={formRef} onSubmit={onSubscribe}>
           <input type="hidden" name="form-name" value="newsletter" />
-          <Box flex-pri="end" mh={2}>
+          <GridCols>
             <Input
+              className={'_cols-12 _cols-tab-plus-8'}
               value={mailingEmail}
               onChange={setMailingEmail}
               placeholder={'Email address'}
             />
-            <Box ml={1}>
-              <Button loading={isSending} text={'Join'} type='submit' />
+            <Box className={'_cols-12 _cols-tab-plus-4'} mv={1}>
+              <Button loading={isSending} text={'Join'} type='submit' full-width />
             </Box>
-          </Box>
+          </GridCols>
           { msgReceived && (
             <T className={'text-success'}>Thank you for subscribing</T>
           )}
