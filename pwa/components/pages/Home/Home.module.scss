@@ -85,6 +85,11 @@ $notchColor: $col-primary-hotpink;
   max-width: 40em;
 }
 
+.intro {
+  max-width: 35em;
+  @include marginHorizontal(auto);
+}
+
 .content {
 
 }

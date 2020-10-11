@@ -9,9 +9,8 @@ import css from './Home.module.scss';
 import commonCss from '../common.module.scss';
 import Link from '../../primitives/Link/Link.view';
 import ROUTE_PATHS from '../../../../consts/ROUTE_PATHS';
-import GridCols from '../../primitives/GridCols';
-import GridItem from '../../primitives/GridCols/GridItem.view';
-import Card from '../../primitives/Card/Card.view';
+import Hr from '../../primitives/Hr';
+import BodySegment from '../../layouts/BodySegment';
 
 type HomePublicProps = {};
 
@@ -28,36 +27,51 @@ const Home: NextPage<HomePublicProps> = (
           </T>
         </Box>
       </Box>
+
       <Box className={[commonCss.contentWrapper]}>
         <Box className={[commonCss.contentInner, commonCss.section]}>
-          <GridCols>
-            <GridItem cols={[12, 8]} className={[commonCss.paragraphContent, 'formatted-content']}>
-              <T content-feature mt={1}>
-                With tech, we are often persuaded to keep clicking, scrolling, and sharing, whether we realise it or not.
-              </T>
-              <T content-feature mb={2}>
-                But the content that keeps us most engaged is starting to affect our perspective on the world, and
-                how we get along together.
-              </T>
-            </GridItem>
-            <GridItem cols={[12, 4]}>
-              <Box m={1 / 4}>
-                <Card className={'formatted-content'}>
-                  <T h5 no-margin>23 October 2020</T>
-                  <T h4 no-margin mb={1 / 2}>Spark Festival Panel</T>
-                  <T content-pragmatic>
-                    Join us for our premiere panel discussion featuring:
-                    <ul>
-                      <li>Nir Eyal (Best-selling Author)</li>
-                      <li>Fontaine Foxworth (Google)</li>
-                      <li>Joseph Gentle (Prismatik)</li>
-                      <li>Hosted by James Addison (Humane Technology Australia)</li>
-                    </ul>
-                  </T>
-                </Card>
-              </Box>
-            </GridItem>
-          </GridCols>
+
+          <Hr stumpy />
+          <T className={['align-center', css.intro]} content-feature mv={3}>
+            Humane Technology Australia supports the Center for Humane Technology's mission to realign technology with humanity’s best interests.  We bring the ongoing global discussion on how technology is impacting society into an Australian context.
+          </T>
+          <Hr stumpy />
+
+          <T h5 mt={2}>Happening soon</T>
+          <Box className={[css.sparkBanner, 'theme--inverted']}>
+            <T h4>
+              Spark Festival panel livestream: "Reclaiming our shared narrative: How personal
+              profiling is dividing us"</T>
+            <T h5>23rd October, 12pm AEDT</T>
+            <T content>
+              Hear from <strong>Nir Eyal</strong>, <strong>Fontaine Foxworth</strong> and
+              <strong>Joseph Gentle</strong> about the ways technology is changing how we
+              relate and what we need to be doing to maintain a healthy society
+            </T>
+          </Box>
+
+          <BodySegment heading="What what're about" className="formatted-content" bodyFormatted mv={4}>
+            <T content-feature>
+              With technology, we are often persuaded to keep clicking, scrolling, and sharing, whether we realise it or not.
+            </T>
+            <T content-feature>
+              But the posts and articles that keep us most engaged are affecting our perspective on the world, and how we all get along.
+            </T>
+            <T content-feature>
+              We’re figuring out how to fix that.
+            </T>
+          </BodySegment>
+
+          <BodySegment heading="What we do" className="formatted-content" bodyFormatted mv={4}>
+            <T content-feature>
+              The more people who understand the nature and severity of the issue, the better we will be able to manage our relationship with technology.
+            </T>
+            <T content-feature>
+              To solve any problem, we first must start with discussion to understand different perspectives and offer
+              fresh ideas. HTA is dedicated to creating constructive conversations, not adversarial debates. We
+              understand the value of listening to different perspectives, and not talking to 'be right' or impress others.
+            </T>
+          </BodySegment>
           {/*<Box className={commonCss.indentedContented}>*/}
           {/*  <T content>*/}
           {/*    The biggest tech companies in the world profit by coaxing you into spending more time on their platform,*/}
@@ -73,31 +87,31 @@ const Home: NextPage<HomePublicProps> = (
           {/*</Box>*/}
         </Box>
       </Box>
-      <Box className={[commonCss.contentWrapper, commonCss.__col_dark, 'theme--inverse']}>
-        <Box className={[commonCss.contentInner, commonCss.section, 'formatted-content']}>
-          <T h2>Humane Technology</T>
-          <T content-feature>We see the solution happening in three distinct areas</T>
-          <GridCols>
-            <GridItem cols={[12, 4]}>
-              <T h1 tagName="p">1.</T>
-              <T h3 tagName={"h4"}>Individual awareness</T>
-              <T content>Raise community concern about the problem</T>
-            </GridItem>
-            <GridItem cols={[12, 4]}>
-              <T h1 tagName="p">2.</T>
-              <T h3 tagName={"h4"}>Government action</T>
-              <T content>Put pressure on governments to act in our best interests</T>
-            </GridItem>
-            <GridItem cols={[12, 4]}>
-              <T h1 tagName="p">3.</T>
-              <T h3 tagName={"h4"}>Technology companies</T>
-              <T content>Change through shifting internal culture and dialogue
-                {/*, market forces and legislative pressures*/}
-              </T>
-            </GridItem>
-          </GridCols>
-        </Box>
-      </Box>
+      {/*<Box className={[commonCss.contentWrapper, commonCss.__col_dark, 'theme--inverse']}>*/}
+      {/*  <Box className={[commonCss.contentInner, commonCss.section, 'formatted-content']}>*/}
+      {/*    <T h2>Humane Technology</T>*/}
+      {/*    <T content-feature>We see the solution happening in three distinct areas</T>*/}
+      {/*    <GridCols>*/}
+      {/*      <GridItem cols={[12, 4]}>*/}
+      {/*        <T h1 tagName="p">1.</T>*/}
+      {/*        <T h3 tagName={"h4"}>Individual awareness</T>*/}
+      {/*        <T content>Raise community concern about the problem</T>*/}
+      {/*      </GridItem>*/}
+      {/*      <GridItem cols={[12, 4]}>*/}
+      {/*        <T h1 tagName="p">2.</T>*/}
+      {/*        <T h3 tagName={"h4"}>Government action</T>*/}
+      {/*        <T content>Put pressure on governments to act in our best interests</T>*/}
+      {/*      </GridItem>*/}
+      {/*      <GridItem cols={[12, 4]}>*/}
+      {/*        <T h1 tagName="p">3.</T>*/}
+      {/*        <T h3 tagName={"h4"}>Technology companies</T>*/}
+      {/*        <T content>Change through shifting internal culture and dialogue*/}
+      {/*          /!*, market forces and legislative pressures*!/*/}
+      {/*        </T>*/}
+      {/*      </GridItem>*/}
+      {/*    </GridCols>*/}
+      {/*  </Box>*/}
+      {/*</Box>*/}
       <Box className={[commonCss.contentWrapper]}>
         <Box className={[commonCss.contentInner, commonCss.section]}>
           <T h3 className={css.notchedHeading}>What we're about</T>

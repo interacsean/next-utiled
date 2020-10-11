@@ -1,0 +1,13 @@
+@import '../../../theme/functions';
+
+.container {
+  > ._heading {
+    flex: 1 0 25%;
+    padding-right: $pad;
+  }
+  > ._body {
+    flex: 3 0 75%;
+    padding-left: $pad;
+    border-left: 1px solid $col-gray-50-a25;
+  }
+}

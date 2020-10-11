@@ -5,11 +5,14 @@ import Box from '../Box';
 import T from '../Typo';
 
 import css from './Hr.module.scss';
+import clx from '../../../../utils/Html/clx';
 
-type HrProps = {};
+type HrProps = {
+  stumpy?: boolean;
+};
 
 const Hr: FC<HrProps> = (props: HrProps): ReturnType<typeof Box> => {
-  return <hr className={css.hr} />;
+  return <hr className={clx([css.hr, props.stumpy && css.__stumpy])} />;
 };
 
 export default Hr;

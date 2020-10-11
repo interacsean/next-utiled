@@ -16,6 +16,7 @@
 .contentInner {
   width: 100%;
   max-width: 1100px;
+
   &:not(.--no-pad) {
     @include paddingHorizontal($pad);
     @include tablet-plus {

@@ -39,8 +39,8 @@
   &:not(.--no-margin) {
     @include formattable-content(0.7em, 1.4em);
   }
-  font-size: toRem(18px);
-  line-height: 165%;
+  font-size: toRem(19px);
+  line-height: 160%;
   font-family: $font-content;
 }
 .content {
