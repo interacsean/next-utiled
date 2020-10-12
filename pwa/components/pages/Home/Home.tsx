@@ -11,6 +11,7 @@ import Link from '../../primitives/Link/Link.view';
 import ROUTE_PATHS from '../../../../consts/ROUTE_PATHS';
 import Hr from '../../primitives/Hr';
 import BodySegment from '../../layouts/BodySegment';
+import Button from '../../primitives/Button';
 
 type HomePublicProps = {};
 
@@ -38,16 +39,21 @@ const Home: NextPage<HomePublicProps> = (
           <Hr stumpy />
 
           <T h5 mt={2}>Happening soon</T>
-          <Box className={[css.sparkBanner, 'theme--inverted']}>
+          <Box className={[css.sparkBanner, 'theme--inverted', 'formatted-content']}>
             <T h4>
               Spark Festival panel livestream: "Reclaiming our shared narrative: How personal
               profiling is dividing us"</T>
             <T h5>23rd October, 12pm AEDT</T>
             <T content>
-              Hear from <strong>Nir Eyal</strong>, <strong>Fontaine Foxworth</strong> and
+              Hear from <strong>Nir Eyal</strong>, <strong>Fontaine Foxworth</strong> and{' '}
               <strong>Joseph Gentle</strong> about the ways technology is changing how we
               relate and what we need to be doing to maintain a healthy society
             </T>
+            <Box mt={1}>
+              <a href={'/'} className={css._button}>
+                Information and Registration
+              </a>
+            </Box>
           </Box>
 
           <BodySegment heading="What what're about" className="formatted-content" bodyFormatted mv={4}>

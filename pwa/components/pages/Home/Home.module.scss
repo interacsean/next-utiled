@@ -1,4 +1,5 @@
 @import '../../../theme/functions';
+@import '../../primitives/Button/Button.module.scss';
 
 .hero {
   height: 70vh;
@@ -83,6 +84,35 @@ $notchColor: $col-primary-hotpink;
   line-height: 160%;
   font-style: italic;
   max-width: 40em;
+}
+
+.sparkBanner {
+  background-image: url("/images/site/banner-acqua-1920.jpg");
+  background-size: cover;
+  padding: $pad;
+  @include tablet-plus {
+    padding: $pad-3 33% $pad-3 $pad-2;
+  }
+
+  ._button {
+    @extend .button-main;
+    @extend .--style-outline;
+    background-color: transparent;
+    border-color: $col-light;
+    &, &:visited {
+      color: $col-light !important;
+    }
+    &:hover {
+      text-decoration: none !important;
+    }
+  }
+  &:hover ._button {
+    background-color: $col-light;
+    border-color: $col-light;
+    &, &:visited {
+      color: $col-bg-dark !important;
+    }
+  }
 }
 
 .intro {
