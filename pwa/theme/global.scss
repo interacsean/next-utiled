@@ -6,7 +6,7 @@
 @import 'flex';
 @import 'grid';
 
-a,
+a:not(.link-raw),
 .text-link {
   text-decoration: none;
   @include clickable;

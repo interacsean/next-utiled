@@ -28,9 +28,13 @@
 
 .footer {
   @include tablet-plus {
-    width: 70%;
-    max-width: 500px;
     margin: 0 auto;
+  }
+  ._footerContent {
+    @include tablet-plus {
+      max-width: 550px;
+
+    }
   }
 }
 

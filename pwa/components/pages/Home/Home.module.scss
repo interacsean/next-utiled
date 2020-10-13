@@ -87,6 +87,8 @@ $notchColor: $col-primary-hotpink;
 }
 
 .sparkBanner {
+  display: block;
+  text-decoration: none;
   background-image: url("/images/site/banner-acqua-1920.jpg");
   background-size: cover;
   padding: $pad;

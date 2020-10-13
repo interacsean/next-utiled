@@ -47,7 +47,7 @@ const MainLayoutView: FC<MainLayoutProps> = (props: MainLayoutProps) => {
         {props.children}
       </Box>
       <Box className={css['footer-ctnr']} flex-center flex-col>
-        <Box tagName={'footer'} className={css._footer} ph={1}>
+        <Box tagName={'footer'} className={css._footer}>
           <Footer />
         </Box>
       </Box>

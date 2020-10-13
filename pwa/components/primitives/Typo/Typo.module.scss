@@ -98,6 +98,7 @@
     @include formattable-content();
   }
   font-size: toRem(13.5px);
+  line-height: 157%;
   font-family: $font-content;
 }
 .content-detail {
@@ -148,6 +149,7 @@
 
 .content-pragmatic--anemic {
   font-size: toRem(16px);
+  line-height: 157%;
   font-family: $font-content;
 }
 .content-pragmatic {
@@ -337,7 +339,7 @@
     @include formattable-content(0.7em, 0.5em);
   }
   font-size: toRem(21px);
-  line-height: 117%;
+  line-height: 130%;
   font-weight: $font-weight-bold;
   font-family: $font-headings;
 }

@@ -1,13 +1,27 @@
 @import '../../../theme/functions';
 
 .container {
-  > ._heading {
-    flex: 1 0 25%;
-    padding-right: $pad;
+  display: flex;
+  justify-content: stretch;
+  width: 100%;
+  @include mobile-only {
+    flex-direction: column;
   }
-  > ._body {
-    flex: 3 0 75%;
-    padding-left: $pad;
-    border-left: 1px solid $col-gray-50-a25;
+
+  @include tablet-plus {
+    > ._heading {
+      flex: 1 0 28%;
+      padding-right: $pad;
+      > ._text {
+        text-align: right;
+      }
+    }
+    > ._body {
+      flex: 1 0 72%;
+      padding-left: $pad;
+      &.__withLine {
+        border-left: 1px solid $col-gray-50-a25;
+      }
+    }
   }
 }

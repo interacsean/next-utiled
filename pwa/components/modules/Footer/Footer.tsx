@@ -10,6 +10,7 @@ import Button from '../../primitives/Button';
 import commonCss from '../../pages/common.module.scss';
 import css from './Footer.module.scss';
 import GridCols from '../../primitives/GridCols';
+import BodySegment from '../../layouts/BodySegment';
 
 type FooterProps = {};
 
@@ -50,27 +51,31 @@ const Footer: FC<FooterProps> = (
 
   return (
     <Box className={commonCss.contentWrapper}>
-      <Box className={[css.footer, 'theme-override--dark']}>
-        { /* @ts-ignore */ }
-        <T h3 mb={1}><a name={'mailinglist'}></a>Stay up to date</T>
-        <T content>Join our mailing list.  We'll let you know about upcoming events and the occasional news.</T>
-        <form ref={formRef} onSubmit={onSubscribe}>
-          <input type="hidden" name="form-name" value="newsletter" />
-          <GridCols>
-            <Input
-              className={'_cols-12 _cols-tab-plus-8'}
-              value={mailingEmail}
-              onChange={setMailingEmail}
-              placeholder={'Email address'}
-            />
-            <Box className={'_cols-12 _cols-tab-plus-4'} mv={1}>
-              <Button loading={isSending} text={'Join'} type='submit' full-width />
-            </Box>
-          </GridCols>
-          { msgReceived && (
-            <T className={'text-success'}>Thank you for subscribing</T>
-          )}
-        </form>
+      <Box className={[css.footer, commonCss.contentInner, 'theme-override--dark']}>
+        <BodySegment heading="" noLine>
+          <Box className={css._footerContent}>
+            { /* @ts-ignore */ }
+            <T h3 mb={1}><a name={'mailinglist'}></a>Stay up to date</T>
+            <T content>Join our mailing list.  We'll let you know about upcoming events and the occasional news.</T>
+            <form ref={formRef} onSubmit={onSubscribe}>
+              <input type="hidden" name="form-name" value="newsletter" />
+              <GridCols>
+                <Input
+                  className={'_cols-12 _cols-tab-plus-8'}
+                  value={mailingEmail}
+                  onChange={setMailingEmail}
+                  placeholder={'Email address'}
+                />
+                <Box className={'_cols-12 _cols-tab-plus-4'} mv={1}>
+                  <Button loading={isSending} text={'Join'} type='submit' full-width />
+                </Box>
+              </GridCols>
+              { msgReceived && (
+                <T className={'text-success'}>Thank you for subscribing</T>
+              )}
+            </form>
+          </Box>
+        </BodySegment>
       </Box>
       <T className={[css.copyright, 'align-center']} mt={3}>
         &copy; Humane Technology Australia
