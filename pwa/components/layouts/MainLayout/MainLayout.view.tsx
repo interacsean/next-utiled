@@ -44,6 +44,9 @@ const MainLayoutView: FC<MainLayoutProps> = (props: MainLayoutProps) => {
         tagName={'main'}
         className={['flex-1 flex --col --sec-stretch', css['main-ctnr']]}
       >
+        {!props.hideHero && (
+          <Box className={[css.hero, commonCss.contentWrapper]} />
+        )}
         {props.children}
       </Box>
       <Box className={css['footer-ctnr']} flex-center flex-col>

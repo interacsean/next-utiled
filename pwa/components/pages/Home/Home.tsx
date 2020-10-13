@@ -19,7 +19,7 @@ const Home: NextPage<HomePublicProps> = (
   _props: HomePublicProps,
 ) => {
   return (
-    <MainLayout>
+    <MainLayout hideHero>
       <Box className={[css.hero, commonCss.contentWrapper]} flex-col flex-pri="end">
         <Box className={[commonCss.contentInner]} pv={1} flex-col flex-pri="end" flex-sec="start">
           <T anemic className={css._blurb}>

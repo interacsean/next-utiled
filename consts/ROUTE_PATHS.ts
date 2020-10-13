@@ -5,6 +5,8 @@
 const ROUTE_PATHS = {
   ROOT: '/',
   CONTACT: '/contact',
+  PRIVACY: '/privacy-policy',
+  TERMS_OF_SERVICE: '/terms-of-service',
   NOT_FOUND: '/404',
 };
 

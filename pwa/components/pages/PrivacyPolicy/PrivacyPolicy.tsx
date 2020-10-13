@@ -1,20 +1,14 @@
+import React from 'react';
 import MainLayout from '../../layouts/MainLayout';
 import Box from '../../primitives/Box';
-import css from '../Home/Home.module.scss';
-import commonCss from '../common.module.scss';
 import T, { P } from '../../primitives/Typo';
-import React from 'react';
 import Link from '../../primitives/Link/Link.view';
 import ROUTE_PATHS from '../../../../consts/ROUTE_PATHS';
+import commonCss from '../common.module.scss';
 
 const PrivacyPolicy = () => {
   return (
     <MainLayout>
-      <Box className={[css.hero, commonCss.contentWrapper]} flex-col flex-pri="end">
-        <Box className={[commonCss.contentInner]} pv={1} flex-col flex-pri="end" flex-sec="start">
-        </Box>
-      </Box>
-
       <Box className={[commonCss.contentWrapper]}>
         <Box className={[commonCss.contentInner, commonCss.section, 'formatted-content']}>
           <T h2>Our Privacy Policy</T>

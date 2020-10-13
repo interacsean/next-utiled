@@ -11,6 +11,8 @@ import commonCss from '../../pages/common.module.scss';
 import css from './Footer.module.scss';
 import GridCols from '../../primitives/GridCols';
 import BodySegment from '../../layouts/BodySegment';
+import Link from '../../primitives/Link/Link.view';
+import ROUTE_PATHS from '../../../../consts/ROUTE_PATHS';
 
 type FooterProps = {};
 
@@ -77,7 +79,15 @@ const Footer: FC<FooterProps> = (
           </Box>
         </BodySegment>
       </Box>
-      <T className={[css.copyright, 'align-center']} mt={3}>
+      <Box flex-pri="center" mt={3}>
+        <Box mh={1 / 2}>
+          <Link to={ROUTE_PATHS.PRIVACY}>Privacy policy</Link>
+        </Box>
+        <Box mh={1 / 2}>
+          <Link to={ROUTE_PATHS.TERMS_OF_SERVICE}>Terms of service</Link>
+        </Box>
+      </Box>
+      <T className={[css.copyright, 'align-center']} mt={1}>
         &copy; Humane Technology Australia
       </T>
     </Box>
