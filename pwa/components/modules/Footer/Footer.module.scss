@@ -29,10 +29,10 @@
 .footer {
   @include tablet-plus {
     margin: 0 auto;
+    max-width: 550px;
   }
   ._footerContent {
     @include tablet-plus {
-      max-width: 550px;
 
     }
   }

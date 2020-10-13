@@ -47,7 +47,7 @@ const Home: NextPage<HomePublicProps> = (
               profiling is dividing us"</T>
             <T content-pragmatic no-margin mv={1 / 2} style={{ opacity: 0.85, fontWeight: 'bold' }}>23rd October, 12pm AEDT</T>
             <T content-pragmatic>
-              Hear from <strong>Nir Eyal</strong>, <strong>Fontaine Foxworth</strong> and <strong>Joseph Gentle</strong> about the ways technology is changing how we
+              Hear from <strong>Nir Eyal</strong> and <strong>Joseph Gentle</strong> about the ways technology is changing how we
               relate and what we need to be doing to maintain a healthy society
             </T>
             <Box mt={3}>
