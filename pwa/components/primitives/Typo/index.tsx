@@ -106,3 +106,7 @@ const T: FC<TypoPublicProps> = ({
 };
 
 export default React.memo(T);
+
+export const P = ({ children, ...props }: TypoPublicProps) => (
+  <T content {...props}>{ children }</T>
+);

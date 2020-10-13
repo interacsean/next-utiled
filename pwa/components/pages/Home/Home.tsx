@@ -3,7 +3,7 @@ import React from 'react';
 
 import MainLayout from '../../layouts/MainLayout';
 import Box from '../../primitives/Box';
-import T from '../../primitives/Typo';
+import T, { P } from '../../primitives/Typo';
 
 import css from './Home.module.scss';
 import commonCss from '../common.module.scss';
@@ -11,15 +11,9 @@ import Link from '../../primitives/Link/Link.view';
 import ROUTE_PATHS from '../../../../consts/ROUTE_PATHS';
 import Hr from '../../primitives/Hr';
 import BodySegment from '../../layouts/BodySegment';
-import Button from '../../primitives/Button';
-import { CompWithChildren } from '../../../../types/util/CompWithChildren';
 import { TypoPublicProps } from '../../primitives/Typo/Typo.props';
 
 type HomePublicProps = {};
-
-const P = ({ children, ...props }: TypoPublicProps) => (
-  <T content {...props}>{ children }</T>
-);
 
 const Home: NextPage<HomePublicProps> = (
   _props: HomePublicProps,
