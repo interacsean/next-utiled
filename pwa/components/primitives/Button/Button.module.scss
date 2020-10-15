@@ -25,6 +25,9 @@ $h-xs: 24px;
 
   // primary
   background-color: $col-primary-hotpink;
+  &:hover {
+    background-color: lighten($col-primary-hotpink, 10%);
+  }
 
   // size medium
   line-height: $h-m;
@@ -58,14 +61,23 @@ $h-xs: 24px;
 
 .--style-secondary {
   background-color: $col-secondary-afternoonsky;
+  &:hover {
+    background-color: lighten($col-secondary-afternoonsky, 10%);
+  }
 }
 
 .--style-tertiary {
   background-color: $col-tertiary-darkgray;
+  &:hover {
+    background-color: lighten($col-tertiary-darkgray, 10%);
+  }
 }
 
 .--style-outline {
   background-color: transparent;
+  &:hover {
+    background-color: rgba($col-light, 10%);
+  }
   border-width: 1px;
   border-style: solid;
   border-color: $col-quaternary-cyan;

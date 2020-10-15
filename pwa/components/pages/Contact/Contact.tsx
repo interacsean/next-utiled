@@ -63,7 +63,7 @@ const Contact: NextPage = () => {
   );
 
   return (
-    <MainLayout>
+    <MainLayout >
       <Box className={[css.hero, commonCss.contentWrapper]} />
       <Box className={[commonCss.contentWrapper]}>
         <Box className={[commonCss.contentInner, commonCss.section]}>

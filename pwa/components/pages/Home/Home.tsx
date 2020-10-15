@@ -11,7 +11,6 @@ import Link from '../../primitives/Link/Link.view';
 import ROUTE_PATHS from '../../../../consts/ROUTE_PATHS';
 import Hr from '../../primitives/Hr';
 import BodySegment from '../../layouts/BodySegment';
-import { TypoPublicProps } from '../../primitives/Typo/Typo.props';
 
 type HomePublicProps = {};
 
@@ -35,7 +34,7 @@ const Home: NextPage<HomePublicProps> = (
           <Hr stumpy />
           <T className={['align-center', css.intro]} content-feature mv={3}>
             Humane Technology Australia supports the <a href="https://humanetech.com" target="_blank">Center for Humane Technology's</a>{' '}
-            mission to realign technology with humanity’s best interests.  We bring the ongoing global discussion on how technology
+            mission to <strong>realign technology with humanity’s best interests</strong>.  We bring the ongoing global discussion on how technology
             is impacting society into an Australian context.
           </T>
           <Hr stumpy />
@@ -84,21 +83,21 @@ const Home: NextPage<HomePublicProps> = (
               'be right' or impress others.
             </P>
             <P>We have three streams of activity:</P>
-            <T h3>1. Educating the public</T>
+            <T h4>1. Educating the public</T>
             <P>
               The more people who understand the nature and severity of the attention economy, the better we will be able to manage our relationship with technology.
             </P>
             <P>
               The issues are complex and at times can be technical, which is why it's vital there are straight-forward resources and open discussion opportunities available to help make better sense of things.
             </P>
-            <T h3>2. Empowering technologists</T>
+            <T h4>2. Empowering technologists</T>
             <P>
               Technology companies are made up of employees, each of whom live in the world that is being reshaped by technology.  By educating those who are building technology in the outcomes of ethical design research, we can start an informed conversation.
             </P>
             <P>
               When technologists are empowered to voice their values and concerns not only as an employee but as a member of the community, the company's products, strategy and internal culture can be guided more holistically.
             </P>
-            <T h3>3. Cultivating conversation</T>
+            <T h4>3. Cultivating conversation</T>
             <P>
               Technology and policy have traditionally been developed at arm's length.  HTA believes a better reciprocal understanding between legislators, technology leaders, sociologists and psychologists will help work towards a shared bigger picture.
             </P>

@@ -60,7 +60,7 @@
   &:not(.--no-margin) {
     @include formattable-content(0.7em, 1.4em);
   }
-  font-size: toRem(20px);
+  font-size: toRem(22.80px);
   line-height: 157%;
   font-family: $font-content;
 }
@@ -77,7 +77,7 @@
 }
 
 .content-caption--anemic {
-  font-size: toRem(14px);
+  font-size: toRem(15.83px);
   font-family: $font-content;
   font-weight: $font-weight-light;
 }
@@ -97,7 +97,7 @@
   &:not(.--no-margin) {
     @include formattable-content();
   }
-  font-size: toRem(13.5px);
+  font-size: toRem(13.19px);
   line-height: 157%;
   font-family: $font-content;
 }
@@ -115,7 +115,7 @@
 }
 
 .content-detail-minor--anemic {
-  font-size: toRem(11.5px);
+  font-size: toRem(11.00px);
   font-family: $font-content;
 }
 .content-detail-minor {
@@ -131,7 +131,7 @@
 }
 
 .content-hint--anemic {
-  font-size: toRem(13.5px);
+  font-size: toRem(13.19px);
   font-family: $font-content;
   font-style: italic;
 }
@@ -148,7 +148,7 @@
 }
 
 .content-pragmatic--anemic {
-  font-size: toRem(16px);
+  font-size: toRem(15.83px);
   line-height: 157%;
   font-family: $font-content;
 }
@@ -166,7 +166,7 @@
 }
 
 .content-field-label-inline--anemic {
-  font-size: toRem(13.5px);
+  font-size: toRem(13.19px);
   text-transform: uppercase;
   font-family: $font-content;
 }
@@ -186,7 +186,7 @@
 }
 
 .content-field-label--anemic {
-  font-size: toRem(14px);
+  font-size: toRem(13.19px);
   font-family: $font-content;
 }
 .content-field-label {
@@ -205,7 +205,7 @@
 }
 
 .content-fields-set-label--anemic {
-  font-size: toRem(15px);
+  font-size: toRem(15.83px);
   text-transform: uppercase;
   font-weight: $font-weight-extrabold;
   font-family: $font-content;
@@ -224,7 +224,7 @@
 }
 
 .content-tag--anemic {
-  font-size: toRem(11.5px);
+  font-size: toRem(11px);
   font-family: $font-content;
   text-transform: uppercase;
 }
@@ -245,7 +245,7 @@
 }
 
 .content-tag-clickable {
-  font-size: toRem(11.5px);
+  font-size: toRem(11px);
   font-family: $font-content;
   text-transform: uppercase;
   @include optionally-clickable-text;
@@ -266,7 +266,7 @@
   &:not(.--no-margin) {
     @include formattable-content(0.7em, 0.5em);
   }
-  font-size: toRem(64px);
+  font-size: toRem(56.73px);
   @include mobile-only {
     font-size: toRem(40px);
   }
@@ -290,7 +290,7 @@
   &:not(.--no-margin) {
     @include formattable-content(0.7em, 0.5em);
   }
-  font-size: toRem(39px);
+  font-size: toRem(39.4px);
   @include mobile-only {
     font-size: toRem(30px);
   }
@@ -314,7 +314,7 @@
   &:not(.--no-margin) {
     @include formattable-content(0.7em, 0.5em);
   }
-  font-size: toRem(28px);
+  font-size: toRem(27.36px);
   @include mobile-only {
     font-size: toRem(24px);
   }
@@ -338,7 +338,7 @@
   &:not(.--no-margin) {
     @include formattable-content(0.7em, 0.5em);
   }
-  font-size: toRem(21px);
+  font-size: toRem(22.8px);
   line-height: 130%;
   font-weight: $font-weight-bold;
   font-family: $font-headings;
@@ -359,7 +359,7 @@
   &:not(.--no-margin) {
     @include formattable-content(0.7em, 0.5em);
   }
-  font-size: toRem(18px);
+  font-size: toRem(19px);
   line-height: 117%;
   font-family: $font-headings;
   &:not(.--no-weight) {

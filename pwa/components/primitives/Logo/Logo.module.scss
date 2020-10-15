@@ -6,14 +6,14 @@
   font-weight: $font-weight-bold;
   font-size: toRem(17px);
   letter-spacing: 0.6px;
-  line-height: 1em;
+  line-height: 1.1em;
 
   @include desktop-small-plus {
-    font-size: toRem(18px);
+    font-size: toRem(19px);
   }
   > ._subline {
     font-weight: $font-weight-medium;
-    font-size: 0.7em;
+    font-size: toRem(13.19px);
     letter-spacing: 2.7px;
     text-transform: uppercase;
   }
