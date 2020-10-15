@@ -58,7 +58,7 @@ const Home: NextPage<HomePublicProps> = (
           </Box>
           { /* note: this Box makes the BodySegment component not break the classNames on static render */ }
           <Box mt={4}>
-            <BodySegment heading="What what're about" className="formatted-content" bodyFormatted>
+            <BodySegment heading="What we're about" className="formatted-content" bodyFormatted>
               <P>
                 With technology, we are often persuaded to keep clicking, scrolling, and sharing, whether we realise it or not.
               </P>
