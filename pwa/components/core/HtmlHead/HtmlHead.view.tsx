@@ -83,6 +83,7 @@ const HtmlHeadView: FC<HtmlHeadProps> = (
         property="og:image"
         content={`${SITE.STATIC_URI}/images/opc-sqr.jpg`}
       />
+      <script src="https://www.google-analytics.com/analytics.js" />
     </Head>
   );
 };
