@@ -95,6 +95,9 @@ $notchColor: $col-primary-hotpink;
   @include tablet-plus {
     padding: $pad-3 33% $pad-3 $pad-2;
   }
+  @include mobile-only {
+    @include marginHorizontal(-$mobile-horizontal-padding);
+  }
 
   ._button {
     @extend .button-main;
