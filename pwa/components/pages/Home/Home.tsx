@@ -39,22 +39,6 @@ const Home: NextPage<HomePublicProps> = (
           </T>
           <Hr stumpy />
 
-          <T h5 mt={2} mb={1 / 2}>Happening soon</T>
-          <Box tagName="a" className={['link-raw', css.sparkBanner, 'theme--inverted', 'formatted-content']} href="https://sparkfestival.co/program/livestream/#events-fri-23-10-20" target="_blank">
-            <T h4 no-margin>
-              Spark Festival panel livestream: "Reclaiming our shared narrative: How personal
-              profiling is dividing us"</T>
-            <T content-pragmatic no-margin mv={1 / 2} style={{ opacity: 0.85, fontWeight: 'bold' }}>23rd October, 12pm AEDT</T>
-            <T content-pragmatic>
-              Hear from <strong>Nir Eyal</strong> and <strong>Joseph Gentle</strong> about the ways technology is changing how we
-              relate and what we need to be doing to maintain a healthy society
-            </T>
-            <Box mt={3}>
-              <a href="https://sparkfestival.co/program/livestream/#events-fri-23-10-20" target="_blank" className={css._button}>
-                Information and Registration
-              </a>
-            </Box>
-          </Box>
           { /* note: this Box makes the BodySegment component not break the classNames on static render */ }
           <Box mt={4}>
             <BodySegment heading="What we're about" className="formatted-content" bodyFormatted>
