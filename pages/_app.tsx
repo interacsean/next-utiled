@@ -9,15 +9,12 @@ import ANALYTICS from '../config/Analytics';
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
   React.useEffect(() => {
-    console.log(ANALYTICS)
     let handleRouteChange = (url: string) => {};
     if (ANALYTICS.ENABLE_TRACKING && ANALYTICS.GA_TRACKING_ID) {
       // @ts-ignore
       const googleAnalytics = window?.ga;
-      if (googleAnalytics && ANALYTICS?.GA_TRACKING_ID) {
+      if (typeof googleAnalytics === 'function' && ANALYTICS?.GA_TRACKING_ID) {
         googleAnalytics('create', ANALYTICS?.GA_TRACKING_ID, 'auto');
-        googleAnalytics('set', 'dimension1', 'kronos-v3');
-        googleAnalytics('set', 'dimension2', 'publift');
         // @ts-ignore (ignores querystring)
         const page = document.location.pathname;
         googleAnalytics('send', 'pageview', page);
@@ -25,7 +22,9 @@ function MyApp({ Component, pageProps }) {
 
       handleRouteChange = (url: string) => {
         const page = url.replace(/\?.*/, '');
-        googleAnalytics('send', 'pageview', page);
+        if (typeof googleAnalytics === 'function') {
+          googleAnalytics('send', 'pageview', page);
+        }
       };
       router.events.on('routeChangeStart', handleRouteChange);
     }
