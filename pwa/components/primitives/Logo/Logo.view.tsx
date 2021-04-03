@@ -10,9 +10,7 @@ const LogoView: FC<LogoProps> = (_props: LogoProps): ReactElement<'div'> => {
   return (
     <Box className={[css['logo-ctnr'], 'flex --sec-center']}>
       <T tagName="h3" className={css.text}>
-        Humane Technology
-        <br/>
-        <T tagName={"span"} className={css._subline}>Australia</T>
+        MentorMatchmaker
       </T>
     </Box>
   );

@@ -10,9 +10,13 @@ import css from './MainLayout.module.scss';
 import commonCss from '../../pages/common.module.scss';
 import routes from '../../../../consts/ROUTE_PATHS';
 import Footer from '../../modules/Footer';
+import Section from '../../primitives/Section/Section';
+import Theme from '../../../theme/Theme';
 
 const MainLayoutView: FC<MainLayoutProps> = (props: MainLayoutProps) => {
   const router = useRouter();
+
+  const { heroImage } = Theme;
 
   return (
     <Box
@@ -22,12 +26,10 @@ const MainLayoutView: FC<MainLayoutProps> = (props: MainLayoutProps) => {
         css['container'],
       ]}
     >
-      <Box className={[commonCss.contentWrapper, css['header-ctnr']]}>
+      <Section className={css['header-ctnr']} noVPad>
         <Box
           tagName={'header'}
           className={[
-            commonCss.contentInner,
-            commonCss['--padded'],
             'flex --sec-center --pri-space-between',
             css.header,
           ]}
@@ -39,21 +41,21 @@ const MainLayoutView: FC<MainLayoutProps> = (props: MainLayoutProps) => {
             <Nav />
           </Box>
         </Box>
-      </Box>
+      </Section>
       <Box
         tagName={'main'}
         className={['flex-1 flex --col --sec-stretch', css['main-ctnr']]}
       >
-        {!props.hideHero && (
+        {!props.hideHero && heroImage && (
           <Box className={[css.hero, commonCss.contentWrapper]} />
         )}
         {props.children}
       </Box>
-      <Box className={css['footer-ctnr']} flex-center flex-col>
+      <Section className={css['footer-ctnr']}>
         <Box tagName={'footer'} className={css._footer}>
           <Footer />
         </Box>
-      </Box>
+      </Section>
     </Box>
   );
 };

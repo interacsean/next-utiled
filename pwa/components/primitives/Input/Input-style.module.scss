@@ -12,13 +12,13 @@
   @include theme-light {
     color: $col-content;
     &::placeholder {
-      color: $col-gray-72;
+      color: $col-form-guide-72;
     }
   }
   @include theme-dark {
     color: $col-content-on-dark;
     &::placeholder {
-      color: $col-gray-50;
+      color: $col-form-guide-50;
     }
   }
 }
@@ -52,9 +52,9 @@
 }
 
 @mixin input-style-underlined {
-  border-bottom: 1px solid $col-panel-contrast-a70;
+  border-bottom: 1px solid $col-form-guide-72;
   &:hover {
-    box-shadow: 0 1px 0 0 $col-panel-contrast-a70;
+    box-shadow: 0 1px 0 0 $col-form-guide-72;
   }
   &:focus {
     @include input-style-underlined--focus;
@@ -62,5 +62,5 @@
 }
 @mixin input-style-underlined--disabled {
   color: $col-content-dimmed;
-  border-bottom: 1px dashed rgba($col-panel-contrast-a50, 0.2);
+  border-bottom: 1px dashed rgba($col-form-guide-50, 0.2);
 }

@@ -53,6 +53,14 @@ $anim-time: $txn-swift;
   }
 }
 
+.openCloseBtn {
+  color: $col-header-fg;
+  > hr {
+    border: none;
+    border-top: 2px solid currentColor;
+    border-radius: 1px;
+  }
+}
 .openBtn {
   @include clickable;
   @include mobile-menu-size {
@@ -82,8 +90,8 @@ $anim-time: $txn-swift;
   justify-content: space-between;
   > hr {
     position: absolute;
-    top: 50%;
-    width: 100%;
+    top: 46%;
+    width: 63%;
   }
   > hr:nth-child(1) {
     transform: rotate(45deg);

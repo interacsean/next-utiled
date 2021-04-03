@@ -44,15 +44,6 @@ const NavView: FC<NavProps> = (props: NavProps): ReactElement<'div'> => {
     <MobileMenu
       menuClass={css.mobileMenu}
       overlayClass={css.mobileMenuOverlay}
-      openButtonColor={'#fffffff8'}
-      closeButtonComponent={
-        <Icon
-          icon={'close'}
-          onClick={closeMenu}
-          ctnrClassName={css.closeBtn}
-          small
-        />
-      }
       isExpanded={openState}
       onExpandedUpdated={setOpenState}
     >

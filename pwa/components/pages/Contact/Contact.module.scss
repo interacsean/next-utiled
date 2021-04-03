@@ -6,7 +6,7 @@
   @extend .content-pragmatic;
   @include input-style;
   @include input-style-filled;
-  border: 1px solid $col-panel-contrast-a50;
+  border: 1px solid $col-form-guide;
   padding: $pad-1-3 $pad-1-2;
   width: 100%;
   height: 6em;

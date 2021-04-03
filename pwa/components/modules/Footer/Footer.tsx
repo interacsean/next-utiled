@@ -13,6 +13,7 @@ import GridCols from '../../primitives/GridCols';
 import BodySegment from '../../layouts/BodySegment';
 import Link from '../../primitives/Link/Link.view';
 import ROUTE_PATHS from '../../../../consts/ROUTE_PATHS';
+import Section from '../../primitives/Section/Section';
 
 type FooterProps = {};
 
@@ -52,8 +53,8 @@ const Footer: FC<FooterProps> = (
   );
 
   return (
-    <Box className={commonCss.contentWrapper}>
-      <Box className={[css.footer, commonCss.contentInner, 'theme-override--dark']}>
+    <Box>
+      <Box className={[css.footer]}>
         <Box className={css._footerContent}>
           { /* @ts-ignore */ }
           <T h3 mb={1} className={'align-center'}><a name={'mailinglist'}></a>Stay up to date</T>

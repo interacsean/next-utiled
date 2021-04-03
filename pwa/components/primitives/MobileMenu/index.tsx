@@ -53,10 +53,7 @@ const MobileMenu: FC<MobileMenuProps> = (
       {!isExpanded
         ? props.openButtonComponent || (
             <div
-              className={css.openBtn}
-              style={
-                props.openButtonColor ? { color: props.openButtonColor } : {}
-              }
+              className={clx([css.openCloseBtn, css.openBtn])}
               onClick={onMenuButtonClick}
             >
               <hr />
@@ -66,10 +63,7 @@ const MobileMenu: FC<MobileMenuProps> = (
           )
         : props.closeButtonComponent || (
             <div
-              className={css.closeBtn}
-              style={
-                props.openButtonColor ? { color: props.openButtonColor } : {}
-              }
+              className={clx([css.openCloseBtn, css.closeBtn])}
               onClick={onMenuButtonClick}
             >
               <hr />

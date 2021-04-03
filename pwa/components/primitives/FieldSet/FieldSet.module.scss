@@ -2,7 +2,7 @@
 
 .container {
   @include theme-light {
-    border: 1px solid $col-panel-contrast-a50;
+    border: 1px solid $col-form-guide-50;
     &.--padded {
       @include paddingHorizontal($fieldset-padding);
       padding-bottom: $fieldset-padding;

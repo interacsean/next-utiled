@@ -1,7 +1,7 @@
 @import '../../../theme/common';
 
-$nav-underline: 1.4px solid $col-primary-hotpink;
-$nav-underline-hover: 1px solid transparentize($col-primary-hotpink, 0.2);
+$nav-underline: 1.4px solid $col-primary-melon;
+$nav-underline-hover: 1px solid transparentize($col-primary-melon, 0.2);
 $nav-ghost-underline: 1px solid transparent;
 
 .mobileMenu {
@@ -12,7 +12,7 @@ $nav-ghost-underline: 1px solid transparent;
     top: $header-height-md;
   }
   @include mobile-menu-size {
-    background-color: $col-bg-dark;
+    background-color: $col-header-bg;
     width: 80%;
     max-width: 300px;
     padding: 0 10px 10px 10px;
@@ -43,7 +43,7 @@ $nav-ghost-underline: 1px solid transparent;
 .closeBtn {
   @include clickable;
   @include mobile-menu-size {
-    color: $col-content-on-dark;
+    color: $col-header-fg;
     width: 44px;
     height: 44px;
     padding: 12px;
@@ -54,15 +54,15 @@ $nav-ghost-underline: 1px solid transparent;
 }
 
 @mixin font-color() {
-  color: $col-light;
+  color: $col-header-fg;
 
   &:visited,
   &:hover,
   &:visited:hover {
-    color: $col-light;
+    color: $col-header-fg;
   }
   &:active {
-    color: rgba($col-light, 0.8);
+    color: rgba($col-header-fg, 0.8);
   }
 }
 
@@ -115,7 +115,7 @@ $nav-ghost-underline: 1px solid transparent;
         left: 0.33em;
         right: 0.33em;
         height: 1.5px;
-        background-color: $col-primary-hotpink;
+        background-color: $col-primary-melon;
       }
       //border-bottom: $nav-underline;
     }
@@ -127,7 +127,7 @@ $nav-ghost-underline: 1px solid transparent;
         left: 0.33em;
         right: 0.33em;
         height: 1.5px;
-        background-color: transparentize($col-primary-hotpink, 0.1);
+        background-color: transparentize($col-primary-melon, 0.1);
       }
       &.--active {
       }
@@ -156,30 +156,30 @@ $nav-ghost-underline: 1px solid transparent;
   @include clickable;
 }
 
-.accountMenu {
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.14),
-    0 3px 1px -2px rgba(0, 0, 0, 0.12);
-  background-color: $col-light;
-  padding: 10px;
-  position: absolute;
-  top: 40px;
-  right: 0;
-  width: 300px;
-  border-radius: 5px;
-  > ._menuItem {
-    padding: 10px 10px;
-    margin: 5px 0;
-    @include clickable;
-    &:hover {
-      background-color: $col-gray-95;
-    }
-    > ._subMenu {
-      margin-top: 10px;
-      color: $col-gray-50;
-      font-size: 12px;
-    }
-  }
-}
+//.accountMenu {
+//  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.14),
+//    0 3px 1px -2px rgba(0, 0, 0, 0.12);
+//  background-color: $col-light;
+//  padding: 10px;
+//  position: absolute;
+//  top: 40px;
+//  right: 0;
+//  width: 300px;
+//  border-radius: 5px;
+//  > ._menuItem {
+//    padding: 10px 10px;
+//    margin: 5px 0;
+//    @include clickable;
+//    &:hover {
+//      background-color: $col-gray-95;
+//    }
+//    > ._subMenu {
+//      margin-top: 10px;
+//      color: $col-gray-50;
+//      font-size: 12px;
+//    }
+//  }
+//}
 
 .mobileAccountMenu {
   display: flex;
@@ -187,7 +187,7 @@ $nav-ghost-underline: 1px solid transparent;
   flex: 1;
   cursor: pointer;
   padding: 10px 10px;
-  border: 1px solid $col-panel-contrast-a50;
+  border: 1px solid $col-form-guide-50;
   width: 100%;
   margin-bottom: 15px;
 
@@ -221,12 +221,12 @@ $nav-ghost-underline: 1px solid transparent;
 }
 
 .menuDivider {
-  border-top: 1px solid $col-panel-contrast-a50;
+  border-top: 1px solid $col-form-guide-50;
   width: 100%;
 }
 
 .menuDividerVertical {
-  border-left: 1px solid $col-panel-contrast-a50;
+  border-left: 1px solid $col-form-guide-50;
   margin-left: $pad;
   margin-right: $pad;
   height: 1.6em;

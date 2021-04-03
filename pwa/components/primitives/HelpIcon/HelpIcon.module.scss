@@ -9,7 +9,7 @@
     @include clickable;
 
     &:hover > ._icon {
-      background-color: $col-panel-contrast-a70;
+      background-color: $col-form-guide-70;
     }
   }
 
@@ -23,7 +23,7 @@
     line-height: 1rem;
     text-align: center;
     @include theme-light {
-      background-color: $col-panel-contrast-a50;
+      background-color: $col-form-guide-50;
       color: $col-light;
     }
     @include theme-dark {

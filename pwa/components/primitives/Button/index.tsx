@@ -24,12 +24,15 @@ const Button = <A extends any[]>(
   );
   const child = props.children || <span>{props.text}</span>;
 
+  const isPrimary = !props.secondary && !props.tertiary;
+
   return (
     <button
       onClick={onClickHandler}
       className={clx([
         css['button-main'],
         props.className,
+        isPrimary && css['--style-primary'],
         props.secondary && css['--style-secondary'],
         props.tertiary && css['--style-tertiary'],
         props.outline && css['--style-outline'],

@@ -57,12 +57,12 @@
 .prefix {
   position: absolute;
   left: 0;
-  color: $col-gray-50;
+  color: $col-form-guide-50;
   transition: color 100ms;
   padding-left: 0.1em;
 
   .input-ctnr:focus-within & {
-    color: $col-gray-72;
+    color: $col-form-guide-72;
   }
 }
 

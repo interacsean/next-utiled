@@ -24,7 +24,7 @@
       @include paddingVertical($pad-3);
     }
     > ._humans {
-      background-color: $col-primary-hotpink;
+      background-color: $col-primary-melon;
     }
     > ._technology {
       background-color: $col-secondary-afternoonsky;
@@ -32,7 +32,7 @@
   }
 }
 
-$notchColor: $col-primary-hotpink;
+$notchColor: $col-primary-melon;
 
 .notchedHeading {
   line-height: 180%;
@@ -79,7 +79,7 @@ $notchColor: $col-primary-hotpink;
   @include paddingVertical($pad-1-2);
   padding-left: $pad;
   margin-left: $pad;
-  border-left: 4px solid $col-panel-contrast-a50;
+  border-left: 4px solid $col-form-guide-50;
   font-size: toRem(21.5px);
   line-height: 160%;
   font-style: italic;

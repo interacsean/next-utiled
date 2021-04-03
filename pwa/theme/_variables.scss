@@ -15,8 +15,10 @@ $col-content-disabled: rgba($col-content, 0.25);
 $col-content-hint-on-dark: $col-content-hint;
 $col-light: #ffffff;
 $col-light-dk1: #EEF1F2;
-$col-primary-hotpink: #DF0043;
-$col-secondary-afternoonsky: #007EC3;
+$col-primary-melon: #FFC93D;
+$col-primary-dk-tangerine: #F89500;
+$col-secondary-afternoonsky: #2D78C8;
+$col-secondary-dk-eveningsky: #083360;
 $col-quaternary-cyan: #00deec;
 $col-tertiary-darkgray: #352e3f;
 $col-tertiary-darkgray-dk1: $col-content;
@@ -35,8 +37,6 @@ $col-lightblue-EBF1FF: #ebf1ff;
 $col-linked-field: $col-link;
 $col-panel: #e7e6ee;
 $col-panel-contrast: #91a6bc;
-$col-panel-contrast-a50: rgba($col-panel-contrast, 0.5);
-$col-panel-contrast-a70: rgba($col-panel-contrast, 0.7);
 $col-panel-contrast-a10: rgba($col-panel-contrast, 0.1);
 $col-panel-contrast-a20: rgba($col-panel-contrast, 0.2);
 $col-panel-contrast-a08: rgba($col-panel-contrast, 0.08);
@@ -49,12 +49,26 @@ $col-headings-2: darken($col-panel-contrast, 40%);
 $col-headings-2-on-dark: $col-panel-contrast;
 $col-opacity-pending: 0.25;
 
+$col-form-guide: #33a;
+  $col-form-guide-72: mix(white, #33a, 72%);
+  $col-form-guide-50: mix(white, #33a, 50%);
+// Component colours
+$col-body-bg: #F6F8FB;
+$col-header-bg: $col-primary-melon;
+$col-header-fg: $col-headings;
+$col-footer-bg: $col-primary-melon;
+$col-footer-fg: $col-content;
+$col-section-altPanel-bg: $col-primary-melon;
+$col-button-primary: $col-primary-dk-tangerine;
+$col-button-secondary: $col-secondary-afternoonsky;
+$col-button-disabled: rgba(#808080, 0.4);
+
 // ** Grays **
-$col-gray-50: #808080;
-$col-gray-50-a25: rgba(#808080, 0.25);
-$col-gray-50-a40: rgba(#808080, 0.4);
-$col-gray-72: #b8b8b8;
-$col-gray-95: #f3f3f3;
+//$col-gray-50: #808080;
+//$col-gray-50-a25: rgba(#808080, 0.25);
+//$col-gray-50-a40: rgba(#808080, 0.4);
+//$col-gray-72: #b8b8b8;
+//$col-gray-95: #f3f3f3;
 $col-light-overlay: rgba($col-light, 0.26);
 $col-dark-overlay: rgba(#000000, 0.15);
 
@@ -71,7 +85,7 @@ $bubble-border-radius: 6px;
 $card-inset-border-width: 1px;
 
 // ** Styles
-$border-table: 1px solid $col-panel-contrast-a50;
+$border-table: 1px solid $col-form-guide-50;
 
 // ** Line height **
 $line-height-content: 160%;
@@ -88,7 +102,13 @@ $pad-1-3: $pad-1-2 / $golden-ratio;
 $pad-1-4: $pad-1-3 / $golden-ratio;
 
 // ** Layout **
+$body-padding-h: $pad-2;
+$body-padding-h-mobile: $pad;
+$section-max-width: 1280px;
+$section-default-vPad: $pad;
 $header-height: 48px;
+$header-min-vPad: $pad-1-2;
+$footer-vPad: $pad-2;
 $header-height-md: 64px;
 $header-height-lg: 70px;
 $mobile-strat-nav: 40px;

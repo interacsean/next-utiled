@@ -23,12 +23,6 @@ $h-xs: 24px;
   border-color: transparent;
   border-width: 0;
 
-  // primary
-  background-color: $col-primary-hotpink;
-  &:hover {
-    background-color: lighten($col-primary-hotpink, 10%);
-  }
-
   // size medium
   line-height: $h-m;
 
@@ -59,10 +53,17 @@ $h-xs: 24px;
   line-height: $h-xs;
 }
 
-.--style-secondary {
-  background-color: $col-secondary-afternoonsky;
+.--style-primary {
+  background-color: $col-button-primary;
   &:hover {
-    background-color: lighten($col-secondary-afternoonsky, 10%);
+    background-color: lighten($col-button-primary, 10%);
+  }
+}
+
+.--style-secondary {
+  background-color: $col-button-secondary;
+  &:hover {
+    background-color: lighten($col-button-secondary, 10%);
   }
 }
 
@@ -80,8 +81,6 @@ $h-xs: 24px;
   }
   border-width: 1px;
   border-style: solid;
-  border-color: $col-quaternary-cyan;
-  color: $col-quaternary-cyan;
 
   line-height: #{$h-m - (1px * 2)};
 
@@ -97,9 +96,13 @@ $h-xs: 24px;
     line-height: #{$h-l - (1px * 2)};
   }
 
+  &.--style-primary {
+    border-color: $col-button-primary;
+    color: $col-button-primary;
+  }
   &.--style-secondary {
-    border-color: $col-secondary-afternoonsky;
-    color: $col-secondary-afternoonsky;
+    border-color: $col-button-secondary;
+    color: $col-button-secondary;
   }
   &.--style-tertiary {
     border-color: $col-tertiary-darkgray-dk1;
@@ -107,12 +110,12 @@ $h-xs: 24px;
   }
   &.--state-disabled {
     background-color: transparent;
-    border-color: $col-gray-50-a40;
-    color: $col-gray-50-a40;
+    border-color: $col-button-disabled;
+    color: $col-button-disabled;
   }
 }
 .--state-disabled {
-  background-color: $col-gray-50-a40;
+  background-color: $col-button-disabled;
   border-color: transparent;
   cursor: default;
   &:active {

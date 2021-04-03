@@ -4,16 +4,18 @@
 $footer-min-height: 20px;
 
 .container {
+  background-color: $col-body-bg;
   min-height: 100vh;
 }
 
 .header-ctnr {
-  background-color: $col-bg-dark;
+  background-color: $col-header-bg;
   position: relative;
   z-index: $zidx-header;
 
-  //box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
-
+  &.__hasShadow {
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
+  }
 }
 
 .header {
@@ -24,10 +26,7 @@ $footer-min-height: 20px;
   @include desktop-small-plus {
     height: $header-height-lg;
   }
-  @include paddingVertical($pad);
-  @include tablet-plus {
-    @include paddingVertical($pad-2);
-  }
+  @include paddingVertical($pad-1-2);
 }
 
 .hero {
@@ -40,20 +39,10 @@ $footer-min-height: 20px;
   background-position: 100% 35%;
 }
 
-.main-ctnr {
-  background-color: white;
-}
 
 .footer-ctnr {
-  @include paddingVertical($pad);
-  @include tablet-plus {
-    @include paddingVertical($pad-3);
-  }
+  @include paddingVertical($footer-vPad);
   min-height: $footer-min-height;
-  > ._footer {
-    width: 100%;
-    max-width: $bkpt-desktop-large;
-  }
-  background-color: $col-bg-dark;
-  color: $col-light;
+  color: $col-footer-fg;
+  background-color: $col-footer-bg;
 }
