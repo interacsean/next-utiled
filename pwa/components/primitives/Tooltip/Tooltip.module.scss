@@ -17,7 +17,7 @@
     transition: opacity $txn-slow $txn-delay;
   }
   border-radius: $card-border-radius;
-  background-color: $col-panel-contrast-dk12;
+  background-color: $col-neutral-dk12;
   padding: $pad-1-2;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
 
@@ -32,7 +32,7 @@
       left: calc(50% - #{$pad / 2});
       @include triangle(
         'bottom',
-        $col-panel-contrast-dk12,
+        $col-neutral-dk12,
         $pad,
         $spaceBetween
       );
@@ -46,7 +46,7 @@
       position: absolute;
       left: -#{$spaceBetween - 1px};
       top: calc(50% - #{$pad / 2});
-      @include triangle('left', $col-panel-contrast-dk12, $pad, $spaceBetween);
+      @include triangle('left', $col-neutral-dk12, $pad, $spaceBetween);
     }
   }
   &.--pos-left {
@@ -57,7 +57,7 @@
       position: absolute;
       right: -#{$spaceBetween - 1px};
       top: calc(50% - #{$pad / 2});
-      @include triangle('right', $col-panel-contrast-dk12, $pad, $spaceBetween);
+      @include triangle('right', $col-neutral-dk12, $pad, $spaceBetween);
     }
   }
   &.--pos-bottom {
@@ -68,7 +68,7 @@
       position: absolute;
       top: -#{$spaceBetween - 1px};
       left: calc(50% - #{$pad / 2});
-      @include triangle('top', $col-panel-contrast-dk12, $pad, $spaceBetween);
+      @include triangle('top', $col-neutral-dk12, $pad, $spaceBetween);
     }
   }
   &.--pos-bottomLeft {

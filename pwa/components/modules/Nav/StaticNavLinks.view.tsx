@@ -2,7 +2,7 @@ import React from 'react';
 
 import noop from '../../../../utils/Functional/noop';
 import ROUTE_PATHS from '../../../../consts/ROUTE_PATHS';
-import Link from '../../primitives/Link';
+import Link from '../../primitives/Link/Link.view';
 import Box from '../../primitives/Box';
 
 import css from './Nav.module.scss';

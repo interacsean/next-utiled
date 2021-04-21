@@ -19,7 +19,7 @@
     }
     &:not(.--filled) {
       > .input {
-        border-bottom: 1px solid $col-panel-contrast;
+        border-bottom: 1px solid $col-neutral;
       }
     }
   }

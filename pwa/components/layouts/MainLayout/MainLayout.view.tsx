@@ -7,7 +7,6 @@ import Nav from '../../modules/Nav';
 
 import { MainLayoutProps } from './MainLayout.props';
 import css from './MainLayout.module.scss';
-import commonCss from '../../pages/common.module.scss';
 import routes from '../../../../consts/ROUTE_PATHS';
 import Footer from '../../modules/Footer';
 import Section from '../../primitives/Section/Section';
@@ -20,19 +19,19 @@ const MainLayoutView: FC<MainLayoutProps> = (props: MainLayoutProps) => {
 
   return (
     <Box
+      flex-col
+      flex-sec="stretch"
       className={[
         `theme--${props.theme || 'light'}`,
-        'flex --col --sec-stretch',
         css['container'],
       ]}
     >
       <Section className={css['header-ctnr']} noVPad>
         <Box
           tagName={'header'}
-          className={[
-            'flex --sec-center --pri-space-between',
-            css.header,
-          ]}
+          flex-sec="center"
+          flex-pri="space-between"
+          className={[css.header]}
         >
           <Box onClick={() => router.push(routes.ROOT)}>
             <Logo />
@@ -44,10 +43,13 @@ const MainLayoutView: FC<MainLayoutProps> = (props: MainLayoutProps) => {
       </Section>
       <Box
         tagName={'main'}
-        className={['flex-1 flex --col --sec-stretch', css['main-ctnr']]}
+        flex-col
+        flex-sec="stretch"
+        flex-1
+        className={[css['main-ctnr']]}
       >
         {!props.hideHero && heroImage && (
-          <Box className={[css.hero, commonCss.contentWrapper]} />
+          <Box className={[css.hero]} />
         )}
         {props.children}
       </Box>

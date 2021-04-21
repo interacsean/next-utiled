@@ -42,12 +42,12 @@
   outline: none;
 
   @include theme-light {
-    box-shadow: 0 1px 0 0 $col-panel-contrast;
-    border-bottom: 1px solid $col-panel-contrast;
+    box-shadow: 0 1px 0 0 $col-neutral;
+    border-bottom: 1px solid $col-neutral;
   }
   @include theme-dark {
-    box-shadow: 0 1px 0 0 $col-panel-contrast;
-    border-bottom: 1px solid $col-panel-contrast;
+    box-shadow: 0 1px 0 0 $col-neutral;
+    border-bottom: 1px solid $col-neutral;
   }
 }
 

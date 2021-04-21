@@ -11,9 +11,10 @@ import InputLabel from '../../layouts/InputLabel';
 import Input from '../../primitives/Input/Input.view';
 import Button from '../../primitives/Button';
 
-import commonCss from '../common.module.scss';
 import css from './Contact.module.scss';
 import GridCols from '../../primitives/GridCols';
+import { ObjRecord } from '../../../../types/util/ObjRecord';
+import Section from '../../primitives/Section/Section';
 
 const DEFAULT_FORM = {
   name: '',
@@ -64,13 +65,12 @@ const Contact: NextPage = () => {
 
   return (
     <MainLayout >
-      <Box className={[css.hero, commonCss.contentWrapper]} />
-      <Box className={[commonCss.contentWrapper]}>
-        <Box className={[commonCss.contentInner, commonCss.section]}>
+      <Section>
+        <Box className={['formatted-content']}>
           <T h2 mb={2}>Get in touch</T>
           <T content>If you'd like to get involved or just have questions about what we do or what's going on,
           send us a message</T>
-          <Box className={commonCss.indentedContented} mv={4}>
+          <Box mv={4}>
             <form ref={formRef} onSubmit={submit}>
               <input type="hidden" name="form-name" value="contact" />
               <GridCols>
@@ -115,7 +115,7 @@ const Contact: NextPage = () => {
             </form>
           </Box>
         </Box>
-      </Box>
+      </Section>
     </MainLayout>
   );
 };

@@ -4,26 +4,29 @@ import Box from '../../primitives/Box';
 import T, { P } from '../../primitives/Typo';
 import Link from '../../primitives/Link/Link.view';
 import ROUTE_PATHS from '../../../../consts/ROUTE_PATHS';
-import commonCss from '../common.module.scss';
+import { ObjRecord } from '../../../../types/util/ObjRecord';
+import Section from '../../primitives/Section/Section';
+
+const SITE_NAME = 'My Site';
 
 const TermsOfService = () => {
   return (
     <MainLayout>
-      <Box className={[commonCss.contentWrapper]}>
-        <Box className={[commonCss.contentInner, commonCss.section, 'formatted-content']}>
+      <Section>
+        <Box className={['formatted-content']}>
           <T h2>Our Privacy Policy</T>
-          <T h4>Welcome to Humane Technology Australia</T>
-          <P>These terms of service outline the rules and regulations for the use of Humane Technology Australia's Website.</P> <br />
-          <P>By accessing this website we assume you accept these terms of service in full. Do not continue to use Humane Technology Australia's website
+          <T h4>Welcome to {SITE_NAME}</T>
+          <P>These terms of service outline the rules and regulations for the use of {SITE_NAME}'s Website.</P> <br />
+          <P>By accessing this website we assume you accept these terms of service in full. Do not continue to use {SITE_NAME}'s website
             if you do not accept all of the terms of service stated on this page.</P>
           <T h4>Cookies</T>
-          <P>We employ the use of cookies. By using Humane Technology Australia's website you consent to the use of cookies
-            in accordance with Humane Technology Australia's privacy policy.</P><P>Most of the modern day interactive web sites
+          <P>We employ the use of cookies. By using {SITE_NAME}'s website you consent to the use of cookies
+            in accordance with {SITE_NAME}'s privacy policy.</P><P>Most of the modern day interactive web sites
           use cookies to enable us to retrieve user details for each visit. Cookies are used in some areas of our site
           to enable the functionality of this area and ease of use for those people visiting.</P>
           <T h4>License</T>
-          <P>Unless otherwise stated, Humane Technology Australia and/or it's licensors own the intellectual property rights for
-            all material on Humane Technology Australia. All intellectual property rights are reserved. You may view and/or print
+          <P>Unless otherwise stated, {SITE_NAME} and/or it's licensors own the intellectual property rights for
+            all material on {SITE_NAME}. All intellectual property rights are reserved. You may view and/or print
             pages from https://humanetechnology.com.au for your own personal use subject to restrictions set in these terms of service.</P>
           <P>You must not:</P>
           <ol>
@@ -31,7 +34,7 @@ const TermsOfService = () => {
             <T tagName="li" content>Sell, rent or sub-license material from https://humanetechnology.com.au</T>
             <T tagName="li" content>Reproduce, duplicate or copy material from https://humanetechnology.com.au</T>
           </ol>
-          <P>Redistribute content from Humane Technology Australia (unless content is specifically made for redistribution).</P>
+          <P>Redistribute content from {SITE_NAME} (unless content is specifically made for redistribution).</P>
           <T h4>Iframes</T>
           <P>Without prior approval and express written permission, you may not create frames around our Web pages or
             use other techniques that alter in any way the visual presentation or appearance of our Web site.</P>
@@ -72,7 +75,7 @@ const TermsOfService = () => {
                                                           href="https://privacygenerator.net">privacygenerator.net</a>. If you have
             any queries regarding any of our terms, please <Link to={ROUTE_PATHS.CONTACT}>contact us</Link>.</P>
         </Box>
-      </Box>
+      </Section>
     </MainLayout>
   );
 };

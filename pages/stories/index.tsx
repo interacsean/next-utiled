@@ -47,69 +47,21 @@ export default function Stories({ children }: CompWithChildren) {
                 <Link to="/stories/primitives/icon">Icon</Link>
               </li>
               <li>
-                <Link to="/stories/primitives/switch-toggle">
-                  Switch Toggle
-                </Link>
-              </li>
-              <li>
-                <Link to="/stories/primitives/autocomplete">Autocomplete</Link>
-              </li>
-              <li>
-                <Link to="/stories/primitives/expandable-group">
-                  Expandable-group
-                </Link>
-              </li>
-              <li>
                 <Link to="/stories/primitives/spinner">Spinner</Link>
-              </li>
-              <li>
-                <Link to="/stories/primitives/loading-text">Loading text</Link>
               </li>
               <li>
                 <Link to="/stories/primitives/mobile-menu">Mobile menu</Link>
               </li>
               <li>
-                <Link to="/stories/primitives/leg-indicator">
-                  Leg indicator
-                </Link>
-              </li>
-              <li>
                 <Link to="/stories/primitives/modal">Modal</Link>
-              </li>
-              <li>
-                <Link to="/stories/primitives/toast-notification">
-                  Toast Notifications
-                </Link>
               </li>
               <li>
                 <Link to="/stories/primitives/tooltip">Tooltip</Link>
               </li>
               <li>
-                <Link to="/stories/primitives/slider">Slider</Link>
-              </li>
-              <li>
-                <Link to="/stories/primitives/field-set">FieldSet</Link>
-              </li>
-              <li>
-                <Link to="/stories/primitives/dropdown">Primitive</Link>
-              </li>
-              <li>
                 <Link to="/stories/primitives/input-label">InputLabel</Link>
               </li>
-              <li>
-                <Link to="/stories/primitives/help-icon">HelpIcon</Link>
-              </li>
               {/* cursor:primitives */}
-            </ul>
-          </Box>
-        </li>
-        <li>
-          <Box mt={1 / 2}>
-            <strong>Charts</strong>
-            <ul>
-              <li>
-                <Link to="/stories/charts/linechart">Line Chart</Link>
-              </li>
             </ul>
           </Box>
         </li>

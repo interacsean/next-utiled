@@ -26,8 +26,6 @@ $col-warning: #1b1b1b;
 $col-error: #d60000;
 $col-success: #008000;
 $col-notification: #d60000;
-$col-debit-em: #b60000;
-$col-credit-em: #005c43;
 $col-positive: #00c3a0;
 $col-link: #007EC3;
 $col-link-visited: #005888;
@@ -35,18 +33,17 @@ $col-link-on-dark: rgba(#bbdff4, 0.9);
 $col-link-visited-on-dark: darken(#bbdff4, 7%);
 $col-lightblue-EBF1FF: #ebf1ff;
 $col-linked-field: $col-link;
-$col-panel: #e7e6ee;
-$col-panel-contrast: #91a6bc;
-$col-panel-contrast-a10: rgba($col-panel-contrast, 0.1);
-$col-panel-contrast-a20: rgba($col-panel-contrast, 0.2);
-$col-panel-contrast-a08: rgba($col-panel-contrast, 0.08);
-$col-panel-contrast-dk12: darken($col-panel-contrast, 12%);
-$col-panel-contrast-dk24: darken($col-panel-contrast, 24%);
-$col-panel-contrast-dk35: darken($col-panel-contrast, 35%);
-$col-panel-contrast-dk50: darken($col-panel-contrast, 50%);
-$col-panel-contrast-lt70: mix($col-light, $col-panel-contrast, 70%);
-$col-headings-2: darken($col-panel-contrast, 40%);
-$col-headings-2-on-dark: $col-panel-contrast;
+$col-neutral: #91a6bc;
+$col-neutral-a10: rgba($col-neutral, 0.1);
+$col-neutral-a20: rgba($col-neutral, 0.2);
+$col-neutral-a08: rgba($col-neutral, 0.08);
+$col-neutral-dk12: darken($col-neutral, 12%);
+$col-neutral-dk24: darken($col-neutral, 24%);
+$col-neutral-dk35: darken($col-neutral, 35%);
+$col-neutral-dk50: darken($col-neutral, 50%);
+$col-neutral-lt70: mix($col-light, $col-neutral, 70%);
+$col-headings-2: darken($col-neutral, 40%);
+$col-headings-2-on-dark: $col-neutral;
 $col-opacity-pending: 0.25;
 
 $col-form-guide: #33a;
@@ -90,7 +87,7 @@ $border-table: 1px solid $col-form-guide-50;
 // ** Line height **
 $line-height-content: 160%;
 
-$pad: 1 * 16px;
+$pad: 16px;
 $golden-ratio: 1.618;
 // - multiples
 $pad-2: $pad * $golden-ratio;

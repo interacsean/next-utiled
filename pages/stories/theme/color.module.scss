@@ -3,20 +3,3 @@
 .paletteSample {
   height: 8em;
 }
-
-.colBgPanelContrast {
-  @extend .paletteSample;
-  background-color: $col-panel-contrast;
-}
-.colBgPanelContrastA20 {
-  @extend .paletteSample;
-  background-color: $col-panel-contrast-a20;
-}
-.colBgPanelContrastA08 {
-  @extend .paletteSample;
-  background-color: $col-panel-contrast-a08;
-}
-.colBgPanelContrastDk35 {
-  @extend .paletteSample;
-  background-color: $col-panel-contrast-dk35;
-}

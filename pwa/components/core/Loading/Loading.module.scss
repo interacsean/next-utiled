@@ -15,13 +15,7 @@ $loading-bar-height: 3px;
   position: absolute;
   height: $loading-bar-height;
   z-index: $zidx-loading-bar /* +1 */;
-  top: $header-height;
-  @include tablet-to-tablet-large {
-    top: $header-height-md;
-  }
-  @include desktop-small-plus {
-    top: $header-height-lg;
-  }
+  top: 0;
   left: 0;
   width: 100%;
 
